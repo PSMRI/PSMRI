@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Release Strategy - AMRIT</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">AMRIT</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../module-guides/functional-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../module-guides/hwc/" class="dropdown-item">Health and Wellness</a>
+</li>
+                                    
+<li>
+    <a href="../../module-guides/104/" class="dropdown-item">104 Service</a>
+</li>
+                                    
+<li>
+    <a href="../../module-guides/1097/" class="dropdown-item">1097 Service</a>
+</li>
+                                    
+<li>
+    <a href="../../module-guides/mmu/" class="dropdown-item">MMU Service</a>
+</li>
+                                    
+<li>
+    <a href="../../module-guides/mcts/" class="dropdown-item">MCTS Service</a>
+</li>
+                                    
+<li>
+    <a href="../../module-guides/fhir/" class="dropdown-item">FHIR Service</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../technical-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../core-technologies/" class="dropdown-item">Core Technologies</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Release Strategy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../community/community-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../community/contributing/" class="dropdown-item">Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../community/roadmap/" class="dropdown-item">Roadmap</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+                                    
+<li>
+    <a href="../../about/license/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../core-technologies/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../community/community-overview/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#branching-strategy" class="nav-link">Branching Strategy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#github-actions" class="nav-link">GitHub Actions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="branching-strategy">Branching Strategy</h2>
+<p>Feature branch workflow is a popular strategy used in software development to manage code changes and collaboration among team members. It involves creating separate branches for each new feature or task being worked on, allowing developers to work on their changes independently without affecting the main codebase. Here's an overview of the feature branch workflow strategy:</p>
+<h4 id="branch-creation">Branch Creation</h4>
+<p>When a new feature or task needs to be implemented, a developer creates a new branch from the main development branch (often called the "master" or "main" branch). This new branch will be dedicated to that specific feature.</p>
+<h4 id="independent-development">Independent Development</h4>
+<p>Developers can work on their assigned features in isolation within their respective branches. They can make changes, write new code, and perform tests without affecting the main branch or other developers' work.</p>
+<h4 id="regular-commits">Regular Commits</h4>
+<p>As work progresses, developers make regular commits to their feature branches. Commits are used to save changes to the local branch and create a history of the development process. It is good practice to make small, focused commits with clear commit messages.</p>
+<h4 id="collaboration-and-review">Collaboration and Review</h4>
+<p>Once a developer completes the implementation of a feature, they can push their branch to a remote repository (such as Git) and create a pull request (PR) or merge request (MR). This allows other team members to review the code changes and provide feedback or suggestions. Code reviews are important for maintaining code quality and catching errors or potential issues before merging into the main branch.</p>
+<h4 id="testing-and-integration">Testing and Integration</h4>
+<p>After the code changes have been reviewed and approved, the feature branch is merged into the main branch. Before merging, it is recommended to run tests on the feature branch to ensure that the new code works correctly and does not introduce any regressions. Once merged, the new feature becomes part of the main codebase.</p>
+<h4 id="branch-cleanup">Branch Cleanup</h4>
+<p>After merging the feature branch, it can be deleted to keep the repository clean and avoid confusion. However, some teams may choose to keep feature branches for reference or to track specific changes. The feature branch workflow allows for parallel development, easier collaboration, and better isolation of changes. It provides a controlled environment for development and reduces the risk of conflicts and issues when multiple developers are working on different features simultaneously.</p>
+<h2 id="github-actions">GitHub Actions</h2>
+<p>GitHub Actions are a feature provided by GitHub that allows you to define and automate custom workflows for your software development projects. Workflows are written in YAML format and reside within your repository's .github/workflows directory. They provide a way to define a set of steps or actions that are executed in response to specific events, such as code pushes, pull requests, or scheduled intervals.</p>
+<p>Here are some key aspects and concepts related to GitHub Workflows:</p>
+<p>Workflow file: A workflow file is a YAML file that defines the workflow. It contains a set of jobs and the associated steps or actions to be executed. You can have multiple workflow files in your repository, each with its own configuration.</p>
+<p>Events: Workflows can be triggered by various events, such as push events (when code is pushed to a branch), pull request events (when a pull request is opened or updated), or scheduled events (at specific intervals). You can configure your workflows to respond to specific events.</p>
+<p>Jobs: A job represents a unit of work within a workflow. Each job consists of a set of steps or actions to be executed. Jobs can run in parallel or sequentially, depending on your workflow requirements.</p>
+<p>Steps: Steps are individual units of work within a job. Each step typically represents a specific action to be performed, such as checking out code, running tests, or deploying an application. You can use pre-defined actions provided by GitHub or create your own custom actions.</p>
+<p>Actions: Actions are reusable units of code that can be used in workflows. Actions can be created by yourself, your organization, or the community. They allow you to encapsulate and share common tasks, making workflows more modular and easier to maintain.</p>
+<p>Workflow syntax: GitHub Workflows use YAML syntax to define the structure and configuration of your workflows. YAML is a human-readable data serialization format. In workflow files, you define jobs, steps, actions, and their respective configurations using YAML syntax.</p>
+<p>Workflow runs and logs: When a workflow is triggered, it creates a workflow run. Workflow runs provide information about the execution of your workflows, including the status, duration, and logs of each step and action. You can view workflow runs in the GitHub Actions tab of your repository.</p>
+<p>GitHub Workflows offer powerful automation capabilities, allowing you to automate various aspects of your software development lifecycle, such as building, testing, and deploying applications. They can help streamline your development process, increase productivity, and improve code quality.</p>
+<h4 id="build-on-pull-requestyml">build-on-pull-request.yml</h4>
+<p>This workflow triggers on each pull request taised in develop and master branch and runs build for respective module.</p>
+<h4 id="sast-and-packageyml">sast-and-package.yml</h4>
+<p>This workflow triggers on each pull request taised in develop and master branch and runs CodeQL which is SAST tool and generates war file for respective module.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

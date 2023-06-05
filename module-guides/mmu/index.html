@@ -7,16 +7,16 @@
         
         
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>User Guide - AMRIT</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>MMU Service - AMRIT</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
-        <link href="../css/extra.css" rel="stylesheet">
+        <link href="../../css/extra.css" rel="stylesheet">
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -24,7 +24,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">AMRIT</a>
+                <a class="navbar-brand" href="../..">AMRIT</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -35,13 +35,87 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href=".." class="nav-link">Home</a>
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">User Guide</a>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../functional-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../hwc/" class="dropdown-item">Health and Wellness</a>
+</li>
+                                    
+<li>
+    <a href="../104/" class="dropdown-item">104 Service</a>
+</li>
+                                    
+<li>
+    <a href="../1097/" class="dropdown-item">1097 Service</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">MMU Service</a>
+</li>
+                                    
+<li>
+    <a href="../mcts/" class="dropdown-item">MCTS Service</a>
+</li>
+                                    
+<li>
+    <a href="../fhir/" class="dropdown-item">FHIR Service</a>
+</li>
+                                </ul>
                             </li>
-                            <li class="navitem">
-                                <a href="../developer-guide/" class="nav-link">Developer Guide</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../developer-guides/technical-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../developer-guides/core-technologies/" class="dropdown-item">Core Technologies</a>
+</li>
+                                    
+<li>
+    <a href="../../developer-guides/release-strategy/" class="dropdown-item">Release Strategy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../community/community-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../community/contributing/" class="dropdown-item">Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../community/roadmap/" class="dropdown-item">Roadmap</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+                                    
+<li>
+    <a href="../../about/license/" class="dropdown-item">License</a>
+</li>
+                                </ul>
                             </li>
                         </ul>
 
@@ -52,12 +126,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
+                                <a rel="prev" href="../1097/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../developer-guide/" class="nav-link">
+                                <a rel="next" href="../mcts/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -79,7 +153,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#project-background" class="nav-link">Project Background</a>
+            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -88,19 +162,9 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="project-background">Project Background</h2>
-<p>A.M.R.I.T (Accessible Medical Records vis Integrated technology) is a digital health platform developed by PSMRI and Wipro. It connects beneficiaries, health facilities &amp; the health workforce in an integrated ecosystem through technology. AMRIT is leveraged by multiple HWCs across states with services such as 104, 1097, Telemedicine.</p>
-<p>AMRIT comprises of below listed functional services.</p>
-<ul>
-<li>HWC : Health and Wellness Centre is one of the comprehensive applications of AMRIT designed to provide medical
-advice &amp; services to beneficiaries.</li>
-<li>Helpline-MCTS :Mother &amp; Child Tracking System provides advice &amp; counselling to would-be and new mothers and her child.</li>
-<li>MMU : Mobile Medical Units are specially equipped vans that provide medical advice &amp; diagnostics in rural areas.</li>
-<li>Helpline-104 : 104 is a helpline providing services such as medical advice, counselling, grievance, directory service and
-epidemic outbreak.</li>
-<li>Helpline-1097 : 1097 is National AIDS helpline service providing counselling and care to beneficiary or family suffering with AIDS.</li>
-<li>FHIR : The Fast Healthcare Interoperability Resources' standard is a set of rules and specifications for exchanging electronic health care data.</li>
-</ul></div>
+<h2 id="overview">Overview</h2>
+<p>Mobile Medical Units are specially equipped vans that provide medical advice &amp; diagnostics in rural areas.</p>
+<p><img alt="Screenshot" src="/module-guides/img/mmu-overview.png" /></p></div>
             </div>
         </div>
 
@@ -109,11 +173,11 @@ epidemic outbreak.</li>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

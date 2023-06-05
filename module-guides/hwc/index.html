@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Health and Wellness - AMRIT</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">AMRIT</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../functional-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Health and Wellness</a>
+</li>
+                                    
+<li>
+    <a href="../104/" class="dropdown-item">104 Service</a>
+</li>
+                                    
+<li>
+    <a href="../1097/" class="dropdown-item">1097 Service</a>
+</li>
+                                    
+<li>
+    <a href="../mmu/" class="dropdown-item">MMU Service</a>
+</li>
+                                    
+<li>
+    <a href="../mcts/" class="dropdown-item">MCTS Service</a>
+</li>
+                                    
+<li>
+    <a href="../fhir/" class="dropdown-item">FHIR Service</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../developer-guides/technical-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../developer-guides/core-technologies/" class="dropdown-item">Core Technologies</a>
+</li>
+                                    
+<li>
+    <a href="../../developer-guides/release-strategy/" class="dropdown-item">Release Strategy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../community/community-overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../community/contributing/" class="dropdown-item">Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../community/roadmap/" class="dropdown-item">Roadmap</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+                                    
+<li>
+    <a href="../../about/license/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../functional-overview/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../104/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#use-cases-overview" class="nav-link">Use Cases Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#registration" class="nav-link">Registration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#ncd-module" class="nav-link">NCD Module</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#anc-module" class="nav-link">ANC Module</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#pnc-module" class="nav-link">PNC Module</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#neonatal-and-infant-health-care-services" class="nav-link">Neonatal and infant health care services</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#childhood-and-adolescent-health-care-services-including-immunization" class="nav-link">Childhood and adolescent health care services including immunization.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#family-planning-contraceptive-services-and-other-reproductive-health-care" class="nav-link">Family planning, Contraceptive services and Other Reproductive Health Care.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#care-for-acute-simple-illnesses-and-minor-ailments-management-of-communicable-diseases-national-health-programs-general-opd" class="nav-link">Care for acute simple illnesses and minor ailments Management of Communicable diseases: National Health Programs. — (General OPD)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="overview">Overview</h2>
+<p>Health and Wellness centre (HWC) is one of the comprehensive applications of AMRIT designed to capture details of 7 Service packages as per guidelines which should be available at Health and Wellness centre.</p>
+<p><img alt="Screenshot" src="/module-guides/img/hwc-overview.png" /></p>
+<h2 id="use-cases-overview">Use Cases Overview</h2>
+<p>: Some of the major use-cases of HWC are as follows.</p>
+<h2 id="registration">Registration</h2>
+<p>•   Consent is taken from the beneficiary to register the patient for HWC platform, and a unique health Id is created for each beneficiary after capturing demographic and other relevant details. 
+•   For already existing beneficiaries the information can be edited at any point of time.
+•   The platform also provides the functionality to create new ABHA ID and download existing ABHA ID card. This is achieved using details issued by government provided Identity cards.
+•   Family tagging can also be performed for a family where every tagged family will have a Head of family and members can be added/deleted to the family and each family has a unique identifier -Family ID.</p>
+<p><img alt="Screenshot" src="/module-guides/img/hwc-registration-flow.png" /></p>
+<h2 id="ncd-module">NCD Module</h2>
+<p>•   It is one of the service packages of HWC and it covers screening, Referral and follow up care of 
+I.  Diabetes Mellitus (DM)
+II. Hypertension (HTN)
+III.    Three common cancers -Oral, Breast, and cervical cancer for beneficiaries 
+•   Objective is to conduct screening for all the beneficiaries which are having the risk to develop NCD, Age considered for screening NCD is 30 and above 30 years of age. So that, the cases can be identified, and treatment can start early for the identified cases.
+•   NCD Module comprises of NCD screening and NCD care, Where Screening is conducted for beneficiaries of Age 30 &amp; above30 and NCD care is provided for Known cases of NCD.
+•   Screening of NCD is done using government guidelines- IDRS/ CBAC and observations made by Nurse and validation done by the medical officer.
+•   After screening, required steps are taken by the medical officer he might order some investigations or refer the case to higher centre for confirmation of the disease.
+•   For known cases of NCD the doctor prescribes medicine and counselling is provided to manage the disease.</p>
+<p><img alt="Screenshot" src="/module-guides/img/hwc-ncd-flow.png" /></p>
+<p>Workflow of NCD module:
+If beneficiary is not found suspected in any of the screening, visit will be closed.
+If beneficiary is found suspected for any of the screening, will be referred to doctor for further consultation.
+Doctor consultation can be done at facility directly or through teleconsultation.
+Teleconsultation is done through Swymed third party software. Refer below flow diagram for details.</p>
+<p><img alt="Screenshot" src="/module-guides/img/hwc-teleconsultation-flow.png" /></p>
+<p>Based on diagnosis Doctor will further investigate and prescribe medicine.
+Modules is also having referral system to refer the patient at higher health facility.
+For patient flow from 1 role to another, it is using flag for roles in i_ben_flow_outreach table.
+Loggers are getting generated in common Wildfly log file.</p>
+<h2 id="anc-module">ANC Module</h2>
+<p>•   This service package provides early care for expectant mothers.
+•   Previous medical history, Family history, Comorbidities are captured and maintained for the individual which is utilized in subsequent ANC visits of the lady.
+•   Obstetric history is also captured and maintained for all the ANC visits.
+•   Identification and management of High-risk cases based on parameters like- Young primi, Low hemoglobin, Low lying placenta.<br />
+•   Investigations for hemoglobin and blood glucose is carried out throughout the term.
+•   Medications are prescribed based on the trimester -Folic acid, calcium, Iron.</p>
+<p><img alt="Screenshot" src="/module-guides/img/hwc-anc-flow.png" /></p>
+<h2 id="pnc-module">PNC Module</h2>
+<p>•   This module helps to provide post-natal care to new mothers.
+•   Module captures Delivery details -placed of delivery, complications during delivery, birth weight of Newborn.
+•   History, Concurrent conditions, Systemic examination can be performed by the Nurse. 
+•   The details can be verified and edited by the doctor.
+•   The doctor provides medications, counselling and orders investigations if required.</p>
+<p><img alt="Screenshot" src="/module-guides/img/hwc-pnc-flow.png" /></p>
+<h2 id="neonatal-and-infant-health-care-services">Neonatal and infant health care services</h2>
+<p>•   This module helps to keep record of infant birth details &amp; immunization of Neonates &amp; Infants.
+•   Maintains history of immunization and helps in maintaining the details of immunization services.
+•   Vitamin A supplementation 
+•   Identification, Management, and treatment of any clinical complaints.</p>
+<p><img alt="Screenshot" src="/module-guides/img/hwc-neonatal-flow.png" /></p>
+<h2 id="childhood-and-adolescent-health-care-services-including-immunization">Childhood and adolescent health care services including immunization.</h2>
+<p>•   This module helps to keep record of Child till the adolescence (1-19 years) birth details &amp; immunization.
+•   Maintains history of immunization and helps in maintaining the details of immunization services.
+•   Vitamin A supplementation 
+•   Identification, Management, and treatment of any clinical complaints.
+•   Counselling on -Hygiene, Menstrual hygiene, promote healthy lifestyle.</p>
+<h2 id="family-planning-contraceptive-services-and-other-reproductive-health-care">Family planning, Contraceptive services and Other Reproductive Health Care.</h2>
+<p>•     This module is used for Family planning, Contraceptive services, and reproductive health.
+•   It captures reproductive details of male and females like number of total children, currently using family planning methods. 
+•   Counselling is provided on contraception methods, family planning.
+•   The dispensation details of contraceptive details are also captured.
+•   For follow up cases the side effects of used contraception are treated, and individual is counselled for the same.
+•   Referral to higher center is also done for cases like expulsion of Intra uterine contraceptive device (IUCD), Complications of IUCD, Abortion services.</p>
+<p><img alt="Screenshot" src="/module-guides/img/hwc-family-planning-flow.png" /></p>
+<h2 id="care-for-acute-simple-illnesses-and-minor-ailments-management-of-communicable-diseases-national-health-programs-general-opd">Care for acute simple illnesses and minor ailments Management of Communicable diseases: National Health Programs. — (General OPD)</h2>
+<p>•   This Module helps in providing outpatient services.
+•   Identification and management of common ailments (fever, Diarrhea, skin infections)
+•    Referral to higher Centre can be done in case of serious conditions.
+•   Basic investigations can be ordered by the doctor and can be performed by lab technician.
+•   Drugs are also dispensed based on the prescription of doctor.</p>
+<p><img alt="Screenshot" src="/module-guides/img/hwc-communicable-disease-flow.png" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
