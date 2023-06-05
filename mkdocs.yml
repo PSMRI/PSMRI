@@ -2,8 +2,25 @@ site_name: AMRIT
 
 nav:
     - Home: index.md
-    - User Guide : user-guide.md
-    - Developer Guide : developer-guide.md 
+    - Projects Guide: 
+        - Overview : module-guides/functional-overview.md
+        - Health and Wellness : module-guides/hwc.md
+        - 104 Service : module-guides/104.md
+        - 1097 Service : module-guides/1097.md
+        - MMU Service : module-guides/mmu.md
+        - MCTS Service : module-guides/mcts.md
+        - FHIR Service : module-guides/fhir.md
+    - Developer Guide : 
+        - Overview : developer-guides/technical-overview.md
+        - Core Technologies : developer-guides/core-technologies.md
+        - Release Strategy : developer-guides/release-strategy.md
+    - Community :
+        - Overview : community/community-overview.md
+        - Contributing : community/contributing.md
+        - Roadmap : community/roadmap.md 
+    - About : 
+        - Release Notes : about/release-notes.md
+        - License : about/license.md
 
 extra_css:
     - css/extra.css
