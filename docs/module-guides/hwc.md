@@ -2,7 +2,7 @@
 
 Health and Wellness centre (HWC) is one of the comprehensive applications of AMRIT designed to capture details of 7 Service packages as per guidelines which should be available at Health and Wellness centre.
 
-![Screenshot](/module-guides/img/hwc-overview.png)
+![amrit-image](./img/hwc-overview.png)
 
 ## Use Cases Overview
 : Some of the major use-cases of HWC are as follows.
@@ -13,7 +13,7 @@ Health and Wellness centre (HWC) is one of the comprehensive applications of AMR
 •	The platform also provides the functionality to create new ABHA ID and download existing ABHA ID card. This is achieved using details issued by government provided Identity cards.
 •	Family tagging can also be performed for a family where every tagged family will have a Head of family and members can be added/deleted to the family and each family has a unique identifier -Family ID.
 
-![Screenshot](/module-guides/img/hwc-registration-flow.png)
+![amrit-image](./img/hwc-registration-flow.png)
 
 ## NCD Module
 •	It is one of the service packages of HWC and it covers screening, Referral and follow up care of 
@@ -26,7 +26,7 @@ III.	Three common cancers -Oral, Breast, and cervical cancer for beneficiaries
 •	After screening, required steps are taken by the medical officer he might order some investigations or refer the case to higher centre for confirmation of the disease.
 •	For known cases of NCD the doctor prescribes medicine and counselling is provided to manage the disease.
 
-![Screenshot](/module-guides/img/hwc-ncd-flow.png)
+![amrit-image](./img/hwc-ncd-flow.png)
 
 
 Workflow of NCD module:
@@ -35,7 +35,7 @@ If beneficiary is found suspected for any of the screening, will be referred to 
 Doctor consultation can be done at facility directly or through teleconsultation.
 Teleconsultation is done through Swymed third party software. Refer below flow diagram for details.
 
-![Screenshot](/module-guides/img/hwc-teleconsultation-flow.png)
+![amrit-image](./img/hwc-teleconsultation-flow.png)
 
 Based on diagnosis Doctor will further investigate and prescribe medicine.
 Modules is also having referral system to refer the patient at higher health facility.
@@ -51,7 +51,7 @@ Loggers are getting generated in common Wildfly log file.
 •	Investigations for hemoglobin and blood glucose is carried out throughout the term.
 •	Medications are prescribed based on the trimester -Folic acid, calcium, Iron.
 
-![Screenshot](/module-guides/img/hwc-anc-flow.png)
+![amrit-image](./img/hwc-anc-flow.png)
 
 
 ## PNC Module
@@ -61,7 +61,7 @@ Loggers are getting generated in common Wildfly log file.
 •	The details can be verified and edited by the doctor.
 •	The doctor provides medications, counselling and orders investigations if required.
 
-![Screenshot](/module-guides/img/hwc-pnc-flow.png)
+![amrit-image](./img/hwc-pnc-flow.png)
 
 ## Neonatal and infant health care services
 •	This module helps to keep record of infant birth details & immunization of Neonates & Infants.
@@ -69,7 +69,7 @@ Loggers are getting generated in common Wildfly log file.
 •	Vitamin A supplementation 
 •	Identification, Management, and treatment of any clinical complaints.
 
-![Screenshot](/module-guides/img/hwc-neonatal-flow.png)
+![amrit-image](./img/hwc-neonatal-flow.png)
 
 ## Childhood and adolescent health care services including immunization.
 •	This module helps to keep record of Child till the adolescence (1-19 years) birth details & immunization.
