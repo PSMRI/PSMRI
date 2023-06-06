@@ -1,4 +1,5 @@
 site_name: AMRIT
+site_url: https://psmri.github.io/
 
 nav:
     - Home: index.md

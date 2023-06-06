@@ -87,7 +87,7 @@ Loggers are getting generated in common Wildfly log file.
 •	For follow up cases the side effects of used contraception are treated, and individual is counselled for the same.
 •	Referral to higher center is also done for cases like expulsion of Intra uterine contraceptive device (IUCD), Complications of IUCD, Abortion services.
 
-![Screenshot](/module-guides/img/hwc-family-planning-flow.png)
+![amrit-image](./img/hwc-family-planning-flow.png)
 
 ## Care for acute simple illnesses and minor ailments Management of Communicable diseases: National Health Programs. — (General OPD) 
 •	This Module helps in providing outpatient services.
@@ -96,4 +96,4 @@ Loggers are getting generated in common Wildfly log file.
 •	Basic investigations can be ordered by the doctor and can be performed by lab technician.
 •	Drugs are also dispensed based on the prescription of doctor.
 
-![Screenshot](/module-guides/img/hwc-communicable-disease-flow.png)
+![amrit-image](./img/hwc-communicable-disease-flow.png)
