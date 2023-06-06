@@ -4,7 +4,11 @@ A.M.R.I.T (Accessible Medical Records vis Integrated technology) is a digital he
 ## Service Overview
 AMRIT services are exposed via well-defined REST API’s as well as UI interfaces for specific line of health applications. Depicted above are the key AMRIT modules & API’s corresponding to relevant modules. Note that nomenclature of actual API signature has been simplified for understanding sake. Actual AMRIT consists of approx. 730+ APIs.
 
+<<<<<<< HEAD
 ![amrit-image](./img/services-overview.png)
+=======
+![Screenshot](/module-guides/img/services-overview.png)
+>>>>>>> 713b5f2e92584bc4bc452213993542235c89e502
 
 AMRIT comprises of below listed functional services.
 
