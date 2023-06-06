@@ -5,11 +5,11 @@ Resources are the basis for all exchangeable FHIR content. Each resource include
 For FHIR in AMRIT, currently we have developed 9 resources out of 27 resources. Wipro along with Google are developing rest of the 18 resources which will make AMRIT to be compliant with ABDM guidelines.
 FHIR R4 is the latest version which we are migrating from HL7 V2.0 current version of AMRIT application
 
-![Screenshot](/module-guides/img/fhir-overview.png)
+![amrit-image](./img/fhir-overview.png)
 
 ## AMRIT FHIR compliant with ABDM
 
-![Screenshot](/module-guides/img/fhir-abdm-compliance.png)
+![amrit-image](./img/fhir-abdm-compliance.png)
 
 ## Workflow
-![Screenshot](/module-guides/img/fhir-workflow.png)
+![amrit-image](./img/fhir-workflow.png)
