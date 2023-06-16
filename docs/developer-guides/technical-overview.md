@@ -17,4 +17,4 @@ Patients, HWCs and PHCs are the key stakeholders. AMRIT can be accessible from v
 
 ## Technical Architecture 
 
-![Screenshot](/developer-guides/img/technical-architecture.png)
+![amrit-image](./img/technical-architecture.png)

@@ -4,7 +4,7 @@ Accessible Medical Records vis Integrated technology
 
 ---
 
-A.M.R.I.T (Accessible Medical Records vis Integrated technology) is a digital health platform developed by PSMRI and Wipro. It connects beneficiaries, health facilities & the health workforce in an integrated ecosystem through technology. AMRIT is leveraged by multiple HWCs across states with services such as 104, 1097, Telemedicine.
+A.M.R.I.T (Accessible Medical Records vis Integrated technology) is a digital health platform initially developed by Piramal Swasthya Management Research Institute (PSMRI). It connects beneficiaries, health facilities & the health workforce in an integrated ecosystem through technology. AMRIT is leveraged by multiple Health and Wellness centres across states in India with services such as 104 helpline, 1097 HIV helpline and telemedicine.
 
 <div class="text-center">
 <a href="./developer-guides/technical-overview" class="btn btn-primary" role="button">Getting Started</a>
