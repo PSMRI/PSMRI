@@ -1,0 +1,1791 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "A microservice for the creation and management of beneficaries.",
+        "version": "1.0",
+        "title": "Identity API",
+        "contact": {
+            "name": "AMRIT",
+            "url": "https://psmri.github.io/PSMRI/",
+            "email": "amrit@piramalswasthya.org"
+        }
+    },
+    "host": "localhost:7078",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "basic-error-controller",
+            "description": "Basic Error Controller"
+        },
+        {
+            "name": "family-tagging-controller",
+            "description": "Family Tagging Controller"
+        },
+        {
+            "name": "identity-controller",
+            "description": "Identity Controller"
+        },
+        {
+            "name": "rmnch-mobile-app-controller",
+            "description": "Rmnch Mobile App Controller"
+        },
+        {
+            "name": "version-controller",
+            "description": "Version Controller"
+        }
+    ],
+    "paths": {
+        "/error": {
+            "get": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingGET",
+                "produces": [
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ModelAndView"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "head": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingHEAD",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ModelAndView"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ModelAndView"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ModelAndView"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingDELETE",
+                "produces": [
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ModelAndView"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "options": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingOPTIONS",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ModelAndView"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingPATCH",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ModelAndView"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/family/addTag": {
+            "post": {
+                "tags": [
+                    "family-tagging-controller"
+                ],
+                "summary": "Create and Modify family tagging",
+                "operationId": "saveFamilyTaggingUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "comingReq",
+                        "description": "comingReq",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/family/createFamily": {
+            "post": {
+                "tags": [
+                    "family-tagging-controller"
+                ],
+                "summary": "Create Family",
+                "operationId": "createFamilyUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "comingReq",
+                        "description": "comingReq",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/family/editFamilyTagging": {
+            "post": {
+                "tags": [
+                    "family-tagging-controller"
+                ],
+                "summary": "edit beneficiary family details",
+                "operationId": "editFamilyDetailsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "comingReq",
+                        "description": "comingReq",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/family/getFamilyDetails": {
+            "post": {
+                "tags": [
+                    "family-tagging-controller"
+                ],
+                "summary": "Get family members details",
+                "operationId": "getFamilyDatailsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "comingReq",
+                        "description": "comingReq",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/family/searchFamily": {
+            "post": {
+                "tags": [
+                    "family-tagging-controller"
+                ],
+                "summary": "Search Family",
+                "operationId": "searchFamilyUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "comingReq",
+                        "description": "comingReq",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/family/untag": {
+            "post": {
+                "tags": [
+                    "family-tagging-controller"
+                ],
+                "summary": "Untag beneficiary from a family",
+                "operationId": "untagFamilyUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "comingReq",
+                        "description": "comingReq",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/advanceSearch": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "getBeneficiaries",
+                "operationId": "getBeneficiariesUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "searchFilter",
+                        "description": "{\"firstName\":\"String\",\"genderId\":\"Integer\",\"fatherName\":\"String\",\"currentAddress\":{\"stateId\":\"Integer\",\"districtId\":\"Integer\",\"villageId\":\"Integer\", \"blockID\":\"Integer\"},\"permanentAddress\":{\"stateId\":\"Integer\",\"districtId\":\"Integer\",\"villageId\":\"Integer\", \"blockID\":\"Integer\"},\"emergencyAddress\":{\"stateId\":\"Integer\",\"districtId\":\"Integer\",\"villageId\":\"Integer\",\"blockID\":\"Integer\"},\"dob\":\"Timestamp\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/benImageByBenRegID": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "getBeneficiaryImageByBenRegID",
+                "operationId": "getBeneficiaryImageByBenRegIDUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "identityData",
+                        "description": "identityData",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/checkAvailablBenIDLocalServer": {
+            "get": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "Check available BENID in local",
+                "operationId": "checkAvailablBenIDLocalServerUsingGET",
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/create": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "createIdentity",
+                "operationId": "createIdentityUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "identityData",
+                        "description": "{\r\n  \"eventTypeName\": \"String\",\r\n  \"eventTypeDate\": \"Timestamp\",\r\n  \"agentId\": \"Integer\",\r\n  \"agentName\": \"String\",\r\n  \"agentPSMapId\": \"Integer\",\r\n  \"agentComment\": \"String\",\r\n  \"serviceId\": \"Integer\",\r\n  \"serviceName\": \"String\",\r\n  \"serviceProviderId\": \"Integer\",\r\n  \"serviceProviderName\": \"String\",\r\n  \"stateId\": \"Integer\",\r\n  \"stateName\": \"String\",\r\n  \"providerServiceMapId\": \"Integer\",\r\n  \"areaId\": \"Integer\",\r\n  \"beneficiaryId\": \"Long\",\r\n  \"beneficiaryRegId\": \"Long\",\r\n  \"communityId\": \"Integer\",\r\n  \"community\": \"String\",\r\n  \"dob\": \"Timestamp\",\r\n  \"ageAtMarriage\": \"Integer\",\r\n  \"educationId\": \"Integer\",\r\n  \"education\": \"String\",\r\n  \"emergencyRegistration\": \"Boolean\",\r\n  \"healthCareWorkerId\": \"Short\",\r\n  \"healthCareWorker\": \"Integer\",\r\n  \"fatherName\": \"String\",\r\n  \"firstName\": \"String\",\r\n  \"genderId\": \"Integer\",\r\n  \"gender\": \"String\",\r\n  \"incomeStatusId\": \"Integer\",\r\n  \"incomeStatus\": \"String\",\r\n  \"lastName\": \"String\",\r\n  \"maritalStatusId\": \"Integer\",\r\n  \"middleName\": \"String\",\r\n  \"occupationId\": \"Integer\",\r\n  \"occupation\": \"String\",\r\n  \"phcId\": \"Integer\",\r\n  \"parkingPlaceId\": \"Integer\",\r\n  \"placeOfWork\": \"String\",\r\n  \"preferredLanguageId\": \"Integer\",\r\n  \"preferredLanguage\": \"String\",\r\n  \"religionId\": \"Integer\",\r\n  \"religion\": \"String\",\r\n  \"remarks\": \"String\",\r\n  \"servicePointId\": \"Integer\",\r\n  \"sourceOfInfo\": \"String\",\r\n  \"spouseName\": \"String\",\r\n  \"statusId\": \"Integer\",\r\n  \"status\": \"String\",\r\n  \"titleId\": \"Integer\",\r\n  \"title\": \"String\",\r\n  \"zoneId\": \"Integer\",\r\n  \"currentAddress\": {\r\n    \"addrLine1\": \"String\",\r\n    \"addrLine2\": \"String\",\r\n    \"addrLine3\": \"String\",\r\n    \"countryId\": \"Integer\",\r\n    \"country\": \"String\",\r\n    \"stateId\": \"Integer\",\r\n    \"state\": \"String\",\r\n    \"districtId\": \"Integer\",\r\n    \"district\": \"String\",\r\n    \"subDistrictId\": \"Integer\",\r\n    \"subDistrict\": \"String\",\r\n    \"villageId\": \"Integer\",\r\n    \"village\": \"String\",\r\n    \"habitation\": \"String\",\r\n    \"addressValue\": \"String\",\r\n    \"pinCode\": \"String\",\r\n    \"zoneID\": \"Integer\",\r\n    \"zoneName\": \"String\",\r\n    \"parkingPlaceID\": \"Integer\",\r\n    \"parkingPlaceName\": \"String\",\r\n    \"servicePointID\": \"Integer\",\r\n    \"servicePointName\": \"String\"\r\n  },\r\n  \"permanentAddress\": {\r\n    \"addrLine1\": \"String\",\r\n    \"addrLine2\": \"String\",\r\n    \"addrLine3\": \"String\",\r\n    \"countryId\": \"Integer\",\r\n    \"country\": \"Integer\",\r\n    \"stateId\": \"Integer\",\r\n    \"state\": \"String\",\r\n    \"districtId\": \"Integer\",\r\n    \"district\": \"String\",\r\n    \"subDistrictId\": \"Integer\",\r\n    \"subDistrict\": \"String\",\r\n    \"villageId\": \"Integer\",\r\n    \"village\": \"String\",\r\n    \"habitation\": \"String\",\r\n    \"addressValue\": \"String\",\r\n    \"pinCode\": \"String\",\r\n    \"zoneID\": \"Integer\",\r\n    \"zoneName\": \"String\",\r\n    \"parkingPlaceID\": \"Integer\",\r\n    \"parkingPlaceName\": \"String\",\r\n    \"servicePointID\": \"Integer\",\r\n    \"servicePointName\": \"String\"\r\n  },\r\n  \"emergencyAddress\": {\r\n    \"addrLine1\": \"String\",\r\n    \"addrLine2\": \"String\",\r\n    \"addrLine3\": \"String\",\r\n    \"countryId\": \"Integer\",\r\n    \"country\": \"India\",\r\n    \"stateId\": \"Integer\",\r\n    \"state\": \"String\",\r\n    \"districtId\": \"Integer\",\r\n    \"district\": \"String\",\r\n    \"subDistrictId\": \"Integer\",\r\n    \"subDistrict\": \"String\",\r\n    \"villageId\": \"Integer\",\r\n    \"village\": \"String\",\r\n    \"habitation\": \"String\",\r\n    \"addressValue\": \"String\",\r\n    \"pinCode\": \"String\",\r\n    \"zoneID\": \"Integer\",\r\n    \"zoneName\": \"String\",\r\n    \"parkingPlaceID\": \"Integer\",\r\n    \"parkingPlaceName\": \"String\",\r\n    \"servicePointID\": \"Integer\",\r\n    \"servicePointName\": \"String\"\r\n  },\r\n  \"isPermAddrSameAsCurrAddr\": \"Boolean\",\r\n  \"isPermAddrSameAsEmerAddr\": \"Boolean\",\r\n  \"isEmerAddrSameAsCurrAddr\": \"Boolean\",\r\n  \"isEmerAddrSameAsPermAddr\": \"Boolean\",\r\n  \"addressType\": \"String\",\r\n  \"preferredEmailId\": \"String\",\r\n  \"contact\": {\r\n    \"preferredPhoneNum\": \"String\",\r\n    \"preferredPhoneTyp\": \"String\",\r\n    \"preferredSMSPhoneNum\": \"String\",\r\n    \"preferredSMSPhoneTyp\": \"String\",\r\n    \"emergencyContactNum\": \"String\",\r\n    \"emergencyContactTyp\": \"String\",\r\n    \"phoneNum1\": \"String\",\r\n    \"phoneTyp1\": \"String\",\r\n    \"phoneNum2\": \"String\",\r\n    \"phoneTyp2\": \"String\",\r\n    \"phoneNum3\": \"String\",\r\n    \"phoneTyp3\": \"String\",\r\n    \"phoneNum4\": \"String\",\r\n    \"phoneTyp4\": \"String\",\r\n    \"phoneNum5\": \"String\",\r\n    \"phoneTyp5\": \"String\"\r\n  },\r\n  \"benFamilyDTOs\": [\r\n    {\r\n      \"benFamilyMapId\": \"BigInteger\",\r\n      \"associatedBenRegId\": \"BigInteger\",\r\n      \"createdBy\": \"String\",\r\n      \"createdDate\": \"String\",\r\n      \"deleted\": \"Boolean\",\r\n      \"isEmergencyContact\": \"Boolean\",\r\n      \"lastModDate\": \"Timestamp\",\r\n      \"modifiedBy\": \"String\",\r\n      \"relationshipToSelf\": \"String\",\r\n      \"relationshipID\": \"Integer\",\r\n      \"vanID\": \"Integer\",\r\n      \"parkingPlaceID\": \"Integer\"\r\n    }\r\n  ],\r\n  \"identities\": [\r\n    {\r\n      \"identityNo\": \"String\",\r\n      \"identityName\": \"String\",\r\n      \"identityNameId\": \"Integer\",\r\n      \"identityType\": \"String\",\r\n      \"identityTypeId\": \"Integer\",\r\n      \"issueDate\": \"Timestamp\",\r\n      \"expiryDate\": \"Timestamp\",\r\n      \"isVerified\": \"Boolean\",\r\n      \"identityFilePath\": \"String\",\r\n      \"createdBy\": \"String\",\r\n      \"benIdentityId\": \"BigInteger\",\r\n      \"deleted\": \"Boolean\"\r\n    }\r\n  ],\r\n  \"bankName\": \"String\",\r\n  \"branchName\": \"String\",\r\n  \"ifscCode\": \"String\",\r\n  \"accountNo\": \"String\",\r\n  \"benImage\": \"String\",\r\n  \"motherName\": \"String\",\r\n  \"maritalStatus\": \"String\",\r\n  \"marriageDate\": \"Timestamp\",\r\n  \"literacyStatus\": \"String\",\r\n  \"isHIVPositive\": \"String\",\r\n  \"sexualOrientationID\": \"Integer\",\r\n  \"sexualOrientationType\": \"String\",\r\n  \"vanID\": \"Integer\",\r\n  \"createdDate\": \"Timestamp\"\r\n}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/edit": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "editIdentity",
+                "operationId": "editIdentityUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "identityEditData",
+                        "description": "{\r\n  \"eventTypeName\": \"String\",\r\n  \"eventTypeDate\": \"Timestamp\",\r\n  \"agentId\": \"Integer\",\r\n  \"agentName\": \"String\",\r\n  \"agentPSMapId\": \"Integer\",\r\n  \"agentComment\": \"String\",\r\n  \"serviceId\": \"Integer\",\r\n  \"serviceName\": \"String\",\r\n  \"serviceProviderId\": \"Integer\",\r\n  \"serviceProviderName\": \"String\",\r\n  \"stateId\": \"Integer\",\r\n  \"stateName\": \"String\",\r\n  \"providerServiceMapId\": \"Integer\",\r\n  \"beneficiaryId\": \"Integer\",\r\n  \"beneficiaryRegId\": \"Long\",\r\n  \"changeInSelfDetails\": \"Boolean\",\r\n  \"firstName\": \"String\",\r\n  \"middleName\": \"String\",\r\n  \"lastName\": \"String\",\r\n  \"fatherName\": \"String\",\r\n  \"spouseName\": \"String\",\r\n  \"maritalStatusId\": \"Integer\",\r\n  \"dob\": \"Timestamp\",\r\n  \"genderId\": \"Integer\",\r\n  \"gender\": \"String\",\r\n  \"title\": \"String\",\r\n  \"titleId\": \"Integer\",\r\n  \"changeInAddress\": \"Boolean\",\r\n  \"currentAddress\": {\r\n    \"addrLine1\": \"String\",\r\n    \"addrLine2\": \"String\",\r\n    \"addrLine3\": \"String\",\r\n    \"countryId\": \"Integer\",\r\n    \"country\": \"String\",\r\n    \"stateId\": \"Integer\",\r\n    \"state\": \"String\",\r\n    \"districtId\": \"Integer\",\r\n    \"district\": \"String\",\r\n    \"subDistrictId\": \"Integer\",\r\n    \"subDistrict\": \"String\",\r\n    \"villageId\": \"Integer\",\r\n    \"village\": \"String\",\r\n    \"habitation\": \"String\",\r\n    \"addressValue\": \"String\",\r\n    \"pinCode\": \"String\",\r\n    \"zoneID\": \"Integer\",\r\n    \"zoneName\": \"String\",\r\n    \"parkingPlaceID\": \"Integer\",\r\n    \"parkingPlaceName\": \"String\",\r\n    \"servicePointID\": \"Integer\",\r\n    \"servicePointName\": \"String\"\r\n  },\r\n  \"permanentAddress\": {\r\n    \"addrLine1\": \"String\",\r\n    \"addrLine2\": \"String\",\r\n    \"addrLine3\": \"String\",\r\n    \"countryId\": \"Integer\",\r\n    \"country\": \"String\",\r\n    \"stateId\": \"Integer\",\r\n    \"state\": \"String\",\r\n    \"districtId\": \"Integer\",\r\n    \"district\": \"String\",\r\n    \"subDistrictId\": \"Integer\",\r\n    \"subDistrict\": \"String\",\r\n    \"villageId\": \"Integer\",\r\n    \"village\": \"String\",\r\n    \"habitation\": \"String\",\r\n    \"addressValue\": \"String\",\r\n    \"pinCode\": \"String\",\r\n    \"zoneID\": \"Integer\",\r\n    \"zoneName\": \"String\",\r\n    \"parkingPlaceID\": \"Integer\",\r\n    \"parkingPlaceName\": \"String\",\r\n    \"servicePointID\": \"Integer\",\r\n    \"servicePointName\": \"String\"\r\n  },\r\n  \"emergencyAddress\": {\r\n    \"addrLine1\": \"String\",\r\n    \"addrLine2\": \"String\",\r\n    \"addrLine3\": \"String\",\r\n    \"countryId\": \"Integer\",\r\n    \"country\": \"String\",\r\n    \"stateId\": \"Integer\",\r\n    \"state\": \"String\",\r\n    \"districtId\": \"Integer\",\r\n    \"district\": \"String\",\r\n    \"subDistrictId\": \"Integer\",\r\n    \"subDistrict\": \"String\",\r\n    \"villageId\": \"Integer\",\r\n    \"village\": \"String\",\r\n    \"habitation\": \"String\",\r\n    \"addressValue\": \"String\",\r\n    \"pinCode\": \"String\",\r\n    \"zoneID\": \"Integer\",\r\n    \"zoneName\": \"String\",\r\n    \"parkingPlaceID\": \"Integer\",\r\n    \"parkingPlaceName\": \"String\",\r\n    \"servicePointID\": \"Integer\",\r\n    \"servicePointName\": \"String\"\r\n  },\r\n  \"isPermAddrSameAsCurrAddr\": \"Boolean\",\r\n  \"isPermAddrSameAsEmerAddr\": \"Boolean\",\r\n  \"isEmerAddrSameAsCurrAddr\": \"Boolean\",\r\n  \"isEmerAddrSameAsPermAddr\": \"Boolean\",\r\n  \"addressType\": \"String\",\r\n  \"changeInContacts\": \"Boolean\",\r\n  \"preferredPhoneNum\": \"String\",\r\n  \"preferredPhoneTyp\": \"String\",\r\n  \"preferredSMSPhoneNum\": \"String\",\r\n  \"preferredSMSPhoneTyp\": \"String\",\r\n  \"emergencyContactNum\": \"String\",\r\n  \"emergencyContactTyp\": \"String\",\r\n  \"preferredEmailId\": \"String\",\r\n  \"contact\": {\r\n    \"preferredPhoneNum\": \"String\",\r\n    \"preferredPhoneTyp\": \"String\",\r\n    \"preferredSMSPhoneNum\": \"String\",\r\n    \"preferredSMSPhoneTyp\": \"String\",\r\n    \"emergencyContactNum\": \"String\",\r\n    \"emergencyContactTyp\": \"String\",\r\n    \"phoneNum1\": \"String\",\r\n    \"phoneTyp1\": \"String\",\r\n    \"phoneNum2\": \"String\",\r\n    \"phoneTyp2\": \"String\",\r\n    \"phoneNum3\": \"String\",\r\n    \"phoneTyp3\": \"String\",\r\n    \"phoneNum4\": \"String\",\r\n    \"phoneTyp4\": \"String\",\r\n    \"phoneNum5\": \"String\",\r\n    \"phoneTyp5\": \"String\"\r\n  },\r\n  \"changeInIdentities\": \"Boolean\",\r\n  \"identities\": [\r\n    {\r\n      \"identityNo\": \"String\",\r\n      \"identityName\": \"String\",\r\n      \"identityNameId\": \"Integer\",\r\n      \"identityType\": \"String\",\r\n      \"identityTypeId\": \"Integer\",\r\n      \"issueDate\": \"Timestamp\",\r\n      \"expiryDate\": \"Timestamp\",\r\n      \"isVerified\": \"Boolean\",\r\n      \"identityFilePath\": \"String\",\r\n      \"createdBy\": \"String\",\r\n      \"benIdentityId\": \"BigInteger\",\r\n      \"deleted\": \"Boolean\"\r\n    }\r\n  ],\r\n  \"changeInOtherDetails\": \"Boolean\",\r\n  \"preferredLanguage\": \"String\",\r\n  \"preferredLanguageId\": \"Integer\",\r\n  \"community\": \"String\",\r\n  \"communityId\": \"Integer\",\r\n  \"education\": \"String\",\r\n  \"educationId\": \"Integer\",\r\n  \"incomeStatus\": \"String\",\r\n  \"incomeStatusId\": \"Integer\",\r\n  \"occupation\": \"String\",\r\n  \"occupationId\": \"Integer\",\r\n  \"religion\": \"String\",\r\n  \"religionId\": \"Integer\",\r\n  \"placeOfWork\": \"String\",\r\n  \"changeInFamilyDetails\": \"Boolean\",\r\n  \"isEmergencyContact\": \"Boolean\",\r\n  \"relationshipToSelf\": \"String\",\r\n  \"relationshipID\": \"Integer\",\r\n  \"associatedBenRegId\": \"BigInteger\",\r\n  \"benFamilyDTOs\": [\r\n    {\r\n      \"benFamilyMapId\": \"BigInteger\",\r\n      \"associatedBenRegId\": \"BigInteger\",\r\n      \"createdBy\": \"String\",\r\n      \"createdDate\": \"String\",\r\n      \"deleted\": \"Boolean\",\r\n      \"isEmergencyContact\": \"Boolean\",\r\n      \"lastModDate\": \"Timestamp\",\r\n      \"modifiedBy\": \"String\",\r\n      \"relationshipToSelf\": \"String\",\r\n      \"relationshipID\": \"Integer\",\r\n      \"vanID\": \"Integer\",\r\n      \"parkingPlaceID\": \"Integer\"\r\n    }\r\n  ],\r\n  \"changeInAssociations\": \"Boolean\",\r\n  \"zoneId\": \"Integer\",\r\n  \"areaId\": \"Integer\",\r\n  \"servicePointId\": \"Integer\",\r\n  \"phcId\": \"Integer\",\r\n  \"remarks\": \"String\",\r\n  \"sourceOfInfo\": \"String\",\r\n  \"status\": \"String\",\r\n  \"statusId\": \"Integer\",\r\n  \"healthCareWorkerType\": \"String\",\r\n  \"healthCareWorkerId\": \"Short\",\r\n  \"changeInBankDetails\": \"Boolean\",\r\n  \"bankName\": \"String\",\r\n  \"branchName\": \"String\",\r\n  \"ifscCode\": \"String\",\r\n  \"accountNo\": \"String\",\r\n  \"benAccountID\": \"Long\",\r\n  \"changeInBenImage\": \"Boolean\",\r\n  \"benImage\": \"String\",\r\n  \"benImageId\": \"Long\",\r\n  \"motherName\": \"String\",\r\n  \"maritalStatus\": \"String\",\r\n  \"marriageDate\": \"Timestamp\",\r\n  \"ageAtMarriage\": \"Integer\",\r\n  \"literacyStatus\": \"String\",\r\n  \"isHIVPositive\": \"String\",\r\n  \"sourceOfInformation\": \"String\",\r\n  \"sexualOrientationID\": \"Integer\",\r\n  \"sexualOrientationType\": \"String\",\r\n  \"vanID\": \"Integer\",\r\n  \"parkingPlaceId\": \"Integer\"\r\n}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/editEducationOrCommunity": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "editIdentityEducationOrCommunity",
+                "operationId": "editIdentityEducationOrCommunityUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "identityEditData",
+                        "description": "{\r\n  \"eventTypeName\": \"String\",\r\n  \"eventTypeDate\": \"Timestamp\",\r\n  \"agentId\": \"Integer\",\r\n  \"agentName\": \"String\",\r\n  \"agentPSMapId\": \"Integer\",\r\n  \"agentComment\": \"String\",\r\n  \"serviceId\": \"Integer\",\r\n  \"serviceName\": \"String\",\r\n  \"serviceProviderId\": \"Integer\",\r\n  \"serviceProviderName\": \"String\",\r\n  \"stateId\": \"Integer\",\r\n  \"stateName\": \"String\",\r\n  \"providerServiceMapId\": \"Integer\",\r\n  \"beneficiaryId\": \"Integer\",\r\n  \"beneficiaryRegId\": \"Long\",\r\n  \"changeInSelfDetails\": \"Boolean\",\r\n  \"firstName\": \"String\",\r\n  \"middleName\": \"String\",\r\n  \"lastName\": \"String\",\r\n  \"fatherName\": \"String\",\r\n  \"spouseName\": \"String\",\r\n  \"maritalStatusId\": \"Integer\",\r\n  \"dob\": \"Timestamp\",\r\n  \"genderId\": \"Integer\",\r\n  \"gender\": \"String\",\r\n  \"title\": \"String\",\r\n  \"titleId\": \"Integer\",\r\n  \"changeInAddress\": \"Boolean\",\r\n  \"currentAddress\": {\r\n    \"addrLine1\": \"String\",\r\n    \"addrLine2\": \"String\",\r\n    \"addrLine3\": \"String\",\r\n    \"countryId\": \"Integer\",\r\n    \"country\": \"String\",\r\n    \"stateId\": \"Integer\",\r\n    \"state\": \"String\",\r\n    \"districtId\": \"Integer\",\r\n    \"district\": \"String\",\r\n    \"subDistrictId\": \"Integer\",\r\n    \"subDistrict\": \"String\",\r\n    \"villageId\": \"Integer\",\r\n    \"village\": \"String\",\r\n    \"habitation\": \"String\",\r\n    \"addressValue\": \"String\",\r\n    \"pinCode\": \"String\",\r\n    \"zoneID\": \"Integer\",\r\n    \"zoneName\": \"String\",\r\n    \"parkingPlaceID\": \"Integer\",\r\n    \"parkingPlaceName\": \"String\",\r\n    \"servicePointID\": \"Integer\",\r\n    \"servicePointName\": \"String\"\r\n  },\r\n  \"permanentAddress\": {\r\n    \"addrLine1\": \"String\",\r\n    \"addrLine2\": \"String\",\r\n    \"addrLine3\": \"String\",\r\n    \"countryId\": \"Integer\",\r\n    \"country\": \"String\",\r\n    \"stateId\": \"Integer\",\r\n    \"state\": \"String\",\r\n    \"districtId\": \"Integer\",\r\n    \"district\": \"String\",\r\n    \"subDistrictId\": \"Integer\",\r\n    \"subDistrict\": \"String\",\r\n    \"villageId\": \"Integer\",\r\n    \"village\": \"String\",\r\n    \"habitation\": \"String\",\r\n    \"addressValue\": \"String\",\r\n    \"pinCode\": \"String\",\r\n    \"zoneID\": \"Integer\",\r\n    \"zoneName\": \"String\",\r\n    \"parkingPlaceID\": \"Integer\",\r\n    \"parkingPlaceName\": \"String\",\r\n    \"servicePointID\": \"Integer\",\r\n    \"servicePointName\": \"String\"\r\n  },\r\n  \"emergencyAddress\": {\r\n    \"addrLine1\": \"String\",\r\n    \"addrLine2\": \"String\",\r\n    \"addrLine3\": \"String\",\r\n    \"countryId\": \"Integer\",\r\n    \"country\": \"String\",\r\n    \"stateId\": \"Integer\",\r\n    \"state\": \"String\",\r\n    \"districtId\": \"Integer\",\r\n    \"district\": \"String\",\r\n    \"subDistrictId\": \"Integer\",\r\n    \"subDistrict\": \"String\",\r\n    \"villageId\": \"Integer\",\r\n    \"village\": \"String\",\r\n    \"habitation\": \"String\",\r\n    \"addressValue\": \"String\",\r\n    \"pinCode\": \"String\",\r\n    \"zoneID\": \"Integer\",\r\n    \"zoneName\": \"String\",\r\n    \"parkingPlaceID\": \"Integer\",\r\n    \"parkingPlaceName\": \"String\",\r\n    \"servicePointID\": \"Integer\",\r\n    \"servicePointName\": \"String\"\r\n  },\r\n  \"isPermAddrSameAsCurrAddr\": \"Boolean\",\r\n  \"isPermAddrSameAsEmerAddr\": \"Boolean\",\r\n  \"isEmerAddrSameAsCurrAddr\": \"Boolean\",\r\n  \"isEmerAddrSameAsPermAddr\": \"Boolean\",\r\n  \"addressType\": \"String\",\r\n  \"changeInContacts\": \"Boolean\",\r\n  \"preferredPhoneNum\": \"String\",\r\n  \"preferredPhoneTyp\": \"String\",\r\n  \"preferredSMSPhoneNum\": \"String\",\r\n  \"preferredSMSPhoneTyp\": \"String\",\r\n  \"emergencyContactNum\": \"String\",\r\n  \"emergencyContactTyp\": \"String\",\r\n  \"preferredEmailId\": \"String\",\r\n  \"contact\": {\r\n    \"preferredPhoneNum\": \"String\",\r\n    \"preferredPhoneTyp\": \"String\",\r\n    \"preferredSMSPhoneNum\": \"String\",\r\n    \"preferredSMSPhoneTyp\": \"String\",\r\n    \"emergencyContactNum\": \"String\",\r\n    \"emergencyContactTyp\": \"String\",\r\n    \"phoneNum1\": \"String\",\r\n    \"phoneTyp1\": \"String\",\r\n    \"phoneNum2\": \"String\",\r\n    \"phoneTyp2\": \"String\",\r\n    \"phoneNum3\": \"String\",\r\n    \"phoneTyp3\": \"String\",\r\n    \"phoneNum4\": \"String\",\r\n    \"phoneTyp4\": \"String\",\r\n    \"phoneNum5\": \"String\",\r\n    \"phoneTyp5\": \"String\"\r\n  },\r\n  \"changeInIdentities\": \"Boolean\",\r\n  \"identities\": [\r\n    {\r\n      \"identityNo\": \"String\",\r\n      \"identityName\": \"String\",\r\n      \"identityNameId\": \"Integer\",\r\n      \"identityType\": \"String\",\r\n      \"identityTypeId\": \"Integer\",\r\n      \"issueDate\": \"Timestamp\",\r\n      \"expiryDate\": \"Timestamp\",\r\n      \"isVerified\": \"Boolean\",\r\n      \"identityFilePath\": \"String\",\r\n      \"createdBy\": \"String\",\r\n      \"benIdentityId\": \"BigInteger\",\r\n      \"deleted\": \"Boolean\"\r\n    }\r\n  ],\r\n  \"changeInOtherDetails\": \"Boolean\",\r\n  \"preferredLanguage\": \"String\",\r\n  \"preferredLanguageId\": \"Integer\",\r\n  \"community\": \"String\",\r\n  \"communityId\": \"Integer\",\r\n  \"education\": \"String\",\r\n  \"educationId\": \"Integer\",\r\n  \"incomeStatus\": \"String\",\r\n  \"incomeStatusId\": \"Integer\",\r\n  \"occupation\": \"String\",\r\n  \"occupationId\": \"Integer\",\r\n  \"religion\": \"String\",\r\n  \"religionId\": \"Integer\",\r\n  \"placeOfWork\": \"String\",\r\n  \"changeInFamilyDetails\": \"Boolean\",\r\n  \"isEmergencyContact\": \"Boolean\",\r\n  \"relationshipToSelf\": \"String\",\r\n  \"relationshipID\": \"Integer\",\r\n  \"associatedBenRegId\": \"BigInteger\",\r\n  \"benFamilyDTOs\": [\r\n    {\r\n      \"benFamilyMapId\": \"BigInteger\",\r\n      \"associatedBenRegId\": \"BigInteger\",\r\n      \"createdBy\": \"String\",\r\n      \"createdDate\": \"String\",\r\n      \"deleted\": \"Boolean\",\r\n      \"isEmergencyContact\": \"Boolean\",\r\n      \"lastModDate\": \"Timestamp\",\r\n      \"modifiedBy\": \"String\",\r\n      \"relationshipToSelf\": \"String\",\r\n      \"relationshipID\": \"Integer\",\r\n      \"vanID\": \"Integer\",\r\n      \"parkingPlaceID\": \"Integer\"\r\n    }\r\n  ],\r\n  \"changeInAssociations\": \"Boolean\",\r\n  \"zoneId\": \"Integer\",\r\n  \"areaId\": \"Integer\",\r\n  \"servicePointId\": \"Integer\",\r\n  \"phcId\": \"Integer\",\r\n  \"remarks\": \"String\",\r\n  \"sourceOfInfo\": \"String\",\r\n  \"status\": \"String\",\r\n  \"statusId\": \"Integer\",\r\n  \"healthCareWorkerType\": \"String\",\r\n  \"healthCareWorkerId\": \"Short\",\r\n  \"changeInBankDetails\": \"Boolean\",\r\n  \"bankName\": \"String\",\r\n  \"branchName\": \"String\",\r\n  \"ifscCode\": \"String\",\r\n  \"accountNo\": \"String\",\r\n  \"benAccountID\": \"Long\",\r\n  \"changeInBenImage\": \"Boolean\",\r\n  \"benImage\": \"String\",\r\n  \"benImageId\": \"Long\",\r\n  \"motherName\": \"String\",\r\n  \"maritalStatus\": \"String\",\r\n  \"marriageDate\": \"Timestamp\",\r\n  \"ageAtMarriage\": \"Integer\",\r\n  \"literacyStatus\": \"String\",\r\n  \"isHIVPositive\": \"String\",\r\n  \"sourceOfInformation\": \"String\",\r\n  \"sexualOrientationID\": \"Integer\",\r\n  \"sexualOrientationType\": \"String\",\r\n  \"vanID\": \"Integer\",\r\n  \"parkingPlaceId\": \"Integer\"\r\n}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/finiteSearch": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "getFiniteBeneficiaries",
+                "operationId": "getFiniteBeneficiariesUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "searchFilter",
+                        "description": "searchFilter",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/getByAbhaAddress": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "searhBeneficiaryByABHAAddress",
+                "operationId": "searhBeneficiaryByABHAAddressUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "healthID",
+                        "in": "query",
+                        "description": "\"String\"",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/getByAbhaIdNo": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "searhBeneficiaryByABHAIdNo",
+                "operationId": "searhBeneficiaryByABHAIdNoUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "healthIDNo",
+                        "in": "query",
+                        "description": "\"String\"",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/getByBenId": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "getBeneficiariesByBeneficiaryId",
+                "operationId": "getBeneficiariesByBeneficiaryIdUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "benId",
+                        "in": "query",
+                        "description": "\"Integer\"",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/getByBenRegId": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "getBeneficiariesByBeneficiaryRegId",
+                "operationId": "getBeneficiariesByBeneficiaryRegIdUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "benRegId",
+                        "in": "query",
+                        "description": "\"Integer\"",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/getByBenRegIdList": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "getBeneficiariesByBenRegIds",
+                "operationId": "getBeneficiariesByBenRegIdsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "benRegIds",
+                        "description": " {\"beneficiaryRegID\": \"Long\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/getByPartialBenRegIdList": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "getPartialBeneficiariesByBenRegIds",
+                "operationId": "getPartialBeneficiariesByBenRegIdsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "benRegIds",
+                        "description": "[Integer,Integer…..(array of benRegId)]",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/getByPhoneNum": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "getBeneficiariesByPhoneNum",
+                "operationId": "getBeneficiariesByPhoneNumUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "phoneNum",
+                        "in": "query",
+                        "description": "\"String\"",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/reserve": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "reserveIdentity",
+                "operationId": "reserveIdentityUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "reserveIdentity",
+                        "description": "reserveIdentity",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/saveGeneratedBenIDToLocalServer": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "Save Server generated BeneficiaryID & BenRegID to local server",
+                "operationId": "saveGeneratedBenIDToLocalServerUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "regIDList",
+                        "description": "{\r\n        \"vanID\": \"Integer\",\r\n        \"benIDRequired\": \"Integer\"\r\n       }",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/searchByFamilyId": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "searhBeneficiaryByFamilyId",
+                "operationId": "searhBeneficiaryByFamilyIdUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "familyId",
+                        "in": "query",
+                        "description": "\"String\"",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/searhByGovIdentity": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "searhBeneficiaryByGovIdentity",
+                "operationId": "searhBeneficiaryByGovIdentityUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "identity",
+                        "in": "query",
+                        "description": "\"String\"",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/id/unreserve": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "unreserveIdentity",
+                "operationId": "unreserveIdentityUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "unreserve",
+                        "description": "unreserve",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/rmnch/getBeneficiaryDataForAsha": {
+            "post": {
+                "tags": [
+                    "rmnch-mobile-app-controller"
+                ],
+                "summary": "get beneficiary data for given village ",
+                "operationId": "getBeneficiaryDataByAshaUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "requestOBJ",
+                        "description": "{\r\n\"AshaId\":\"Integer\",\r\n\"fromDate\":\"DateTime\",\r\n\"toDate\":\"DateTime\",\r\n\"pageNo\":\"Integer\"\r\n}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/rmnch/getBeneficiaryDataForVillage": {
+            "post": {
+                "tags": [
+                    "rmnch-mobile-app-controller"
+                ],
+                "summary": "get beneficiary data for given village ",
+                "operationId": "getBeneficiaryDataUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "requestOBJ",
+                        "description": "{\r\n\"villageID\":\"Integer\",\r\n\"fromDate\":\"DateTime\",\r\n\"toDate\":\"DateTime\",\r\n\"pageNo\":\"Integer\"\r\n}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/rmnch/syncDataToAmrit": {
+            "post": {
+                "tags": [
+                    "rmnch-mobile-app-controller"
+                ],
+                "summary": "sync data to amrit for already regestered beneficiary with AMRIT beneficiary id ",
+                "operationId": "syncDataToAmritUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "requestOBJ",
+                        "description": "{\r\n  \"beneficiaryDetails\": [\r\n    {\r\n      \"BenRegId\": \"Long\",\r\n      \"Countyid\": \"Integer\",\r\n      \"Processed\": \"String\",\r\n      \"ProviderServiceMapID\": \"Integer\",\r\n      \"VanID\": \"Integer\",\r\n      \"aadhaNo\": \"String\",\r\n      \"aadha_noId\": \"Integer\",\r\n      \"age\": \"Integer\",\r\n      \"age_unit\": \"String\",\r\n      \"age_unitId\": \"Integer\",\r\n      \"bankAccount\": \"String\",\r\n      \"bank_accountId\": \"Integer\",\r\n      \"benficieryid\": \"Long\",\r\n      \"childRegisteredAWCID\": \"Long\",\r\n      \"childRegisteredSchoolID\": \"Integer\",\r\n      \"createdBy\": \"String\",\r\n      \"createdDate\": \"Timestamp\",\r\n      \"currSubDistrictId\": \"Integer\",\r\n      \"facilitySectionID\": \"Integer\",\r\n      \"familyHeadRelation\": \"String\",\r\n      \"familyHeadRelationPosition\": \"Integer\",\r\n      \"guidelineId\": \"String\",\r\n      \"houseoldId\": \"Long\",\r\n      \"id\": \"Long\",\r\n      \"ifscCode\": \"String\",\r\n      \"lastDeliveryConductedID\": \"Integer\",\r\n      \"latitude\": \"Decimal\",\r\n      \"lengthofMenstrualCycleId\": \"Integer\",\r\n      \"literacyId\": \"Integer\",\r\n      \"longitude\": \"Decimal\",\r\n      \"marriageDate\": \"Timestamp\",\r\n      \"menstrualBFDId\": \"Integer\",\r\n      \"menstrualProblemId\": \"Integer\",\r\n      \"menstrualStatusId\": \"Integer\",\r\n      \"mobileOthers\": \"String\",\r\n      \"mobilenoofRelation\": \"String\",\r\n      \"mobilenoofRelationId\": \"Integer\",\r\n      \"nameOfBank\": \"String\",\r\n      \"ncd_priority\": \"Integer\",\r\n      \"need_opcareId\": \"Integer\",\r\n      \"previousLiveBirth\": \"String\",\r\n      \"rchid\": \"String\",\r\n      \"registrationDate\": \"Timestamp\",\r\n      \"registrationType\": \"String\",\r\n      \"regularityofMenstrualCycleId\": \"Integer\",\r\n      \"religionOthers\": \"String\",\r\n      \"reproductiveStatus\": \"String\",\r\n      \"reproductiveStatusId\": \"Integer\",\r\n      \"serverUpdatedStatus\": \"Integer\",\r\n      \"typeofSchoolID\": \"Integer\",\r\n      \"villagename\": \"String\",\r\n      \"whoConductedDeliveryID\": \"Integer\",\r\n      \"hrpStatus\": \"Boolean\",\r\n      \"immunization\": \"Boolean\",\r\n      \"nishchayPregnancyStatus\": \"String\",\r\n      \"nishchayPregnancyStatusPosition\": \"Integer\",\r\n      \"nishchayDeliveryStatus\": \"String\",\r\n      \"nishchayDeliveryStatusPosition\": \"Integer\",\r\n      \"relatedBeneficiaryIds\": [\r\n        \"Long\"\r\n      ]\r\n    }\r\n  ],\r\n  \"bornBirthDeatils\": [\r\n    {\r\n      \"BenRegId\": \"Long\",\r\n      \"Countyid\": \"Integer\",\r\n      \"Processed\": \"String\",\r\n      \"ProviderServiceMapID\": \"Integer\",\r\n      \"VanID\": \"Integer\",\r\n      \"bcdBatchNo\": \"String\",\r\n      \"benficieryid\": \"Integer\",\r\n      \"birthDefects\": \"String\",\r\n      \"birthDefectsOthers\": \"String\",\r\n      \"birthDefectsid\": \"Integer\",\r\n      \"birthDosage\": \"String\",\r\n      \"birthDosageid\": \"Integer\",\r\n      \"birthPlace\": \"String\",\r\n      \"birthPlaceid\": \"Integer\",\r\n      \"childName\": \"String\",\r\n      \"complecations\": \"String\",\r\n      \"complecationsOther\": \"String\",\r\n      \"complecationsid\": \"Integer\",\r\n      \"conductedDelivery\": \"String\",\r\n      \"conductedDeliveryOther\": \"String\",\r\n      \"conductedDeliveryid\": \"Integer\",\r\n      \"corticosteroidGivenMotherid\": \"Integer\",\r\n      \"createdBy\": \"String\",\r\n      \"createdDate\": \"Timestamp\",\r\n      \"criedImmediately\": \"String\",\r\n      \"criedImmediatelyid\": \"Integer\",\r\n      \"deliveryType\": \"String\",\r\n      \"deliveryTypeOther\": \"String\",\r\n      \"deliveryTypeid\": \"Integer\",\r\n      \"districtid\": \"Integer\",\r\n      \"districtname\": \"String\",\r\n      \"facilityOther\": \"String\",\r\n      \"facilityid\": \"Integer\",\r\n      \"feedingStarted\": \"String\",\r\n      \"feedingStartedid\": \"Integer\",\r\n      \"gestationalAgeid\": \"Integer\",\r\n      \"heightAtBirth\": \"Integer\",\r\n      \"hptdBatchNo\": \"String\",\r\n      \"id\": \"Integer\",\r\n      \"motherBenId\": \"Integer\",\r\n      \"motherName\": \"String\",\r\n      \"motherposition\": \"Integer\",\r\n      \"opvBatchNo\": \"String\",\r\n      \"placeName\": \"String\",\r\n      \"serverUpdatedStatus\": \"Integer\",\r\n      \"stateid\": \"Integer\",\r\n      \"term\": \"String\",\r\n      \"termid\": \"Integer\",\r\n      \"villageid\": \"Integer\",\r\n      \"vitaminkBatchNo\": \"String\",\r\n      \"weightAtBirth\": \"Decimal\"\r\n    }\r\n  ]\r\n}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/version": {
+            "get": {
+                "tags": [
+                    "version-controller"
+                ],
+                "summary": "versionInformation",
+                "operationId": "versionInformationUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ModelAndView": {
+            "type": "object",
+            "properties": {
+                "empty": {
+                    "type": "boolean"
+                },
+                "model": {
+                    "type": "object"
+                },
+                "modelMap": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "object"
+                    }
+                },
+                "reference": {
+                    "type": "boolean"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "100",
+                        "101",
+                        "102",
+                        "103",
+                        "200",
+                        "201",
+                        "202",
+                        "203",
+                        "204",
+                        "205",
+                        "206",
+                        "207",
+                        "208",
+                        "226",
+                        "300",
+                        "301",
+                        "302",
+                        "303",
+                        "304",
+                        "305",
+                        "307",
+                        "308",
+                        "400",
+                        "401",
+                        "402",
+                        "403",
+                        "404",
+                        "405",
+                        "406",
+                        "407",
+                        "408",
+                        "409",
+                        "410",
+                        "411",
+                        "412",
+                        "413",
+                        "414",
+                        "415",
+                        "416",
+                        "417",
+                        "418",
+                        "419",
+                        "420",
+                        "421",
+                        "422",
+                        "423",
+                        "424",
+                        "426",
+                        "428",
+                        "429",
+                        "431",
+                        "451",
+                        "500",
+                        "501",
+                        "502",
+                        "503",
+                        "504",
+                        "505",
+                        "506",
+                        "507",
+                        "508",
+                        "509",
+                        "510",
+                        "511"
+                    ]
+                },
+                "view": {
+                    "$ref": "#/definitions/View"
+                },
+                "viewName": {
+                    "type": "string"
+                }
+            },
+            "title": "ModelAndView"
+        },
+        "View": {
+            "type": "object",
+            "properties": {
+                "contentType": {
+                    "type": "string"
+                }
+            },
+            "title": "View"
+        }
+    }
+}
