@@ -1,0 +1,1 @@
+<swagger-ui src="./../api-specs/tm-api-spec.json">

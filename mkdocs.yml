@@ -22,6 +22,22 @@ nav:
     - About : 
         - Release Notes : about/release-notes.md
         - License : about/license.md
-
+    - API-Reference :
+        - Admin : api-reference/admin-api-spec.md
+        - Common : api-reference/common-api-spec.md
+        - ECD : api-reference/ecd-api-spec.md
+        - FHIR : api-reference/fhir-api-spec.md
+        - Helpline-104 : api-reference/helpline104-api-spec.md
+        - Helpline-1097 : api-reference/helpline1097-api-spec.md
+        - HelplineMCTS : api-reference/helplinemcts-api-spec.md
+        - HWC : api-reference/hwc-api-spec.md   
+        - Identity : api-reference/identity-api-spec.md
+        - Inventory : api-reference/inventory-api-spec.md
+        - MMU : api-reference/mmu-api-spec.md
+        - Scheduler : api-reference/scheduler-api-spec.md
+        - TM : api-reference/tm-api-spec.md
 extra_css:
     - css/extra.css
+
+plugins :
+    - swagger-ui-tag    

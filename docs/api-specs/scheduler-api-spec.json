@@ -1,0 +1,1014 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "An interface between the client and scheduling services which allows users to consult with specialists enabling them to book or cancel slots based on availability.",
+        "version": "1.0",
+        "title": "Scheduler API",
+        "termsOfService": "Terms of service",
+        "contact": {
+            "name": "AMRIT",
+            "url": "https://psmri.github.io/PSMRI/",
+            "email": "amrit@piramalswasthya.org"
+        },
+        "license": {}
+    },
+    "host": "localhost:7078",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "van-controller",
+            "description": "Van Controller"
+        },
+        {
+            "name": "scheduling-controller",
+            "description": "Scheduling Controller"
+        },
+        {
+            "name": "specialist-controller",
+            "description": "Specialist Controller"
+        }
+    ],
+    "paths": {
+        "/schedule/bookSlot": {
+            "post": {
+                "tags": [
+                    "scheduling-controller"
+                ],
+                "summary": "Book available slots of specialist of a particular day",
+                "operationId": "bookSlotUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialistInput1",
+                        "description": "specialistInput1",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/schedule/cancelBookedSlot": {
+            "post": {
+                "tags": [
+                    "scheduling-controller"
+                ],
+                "summary": "Cancel booked slots of specialist of a particular day",
+                "operationId": "cancelBookedSlotUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialistInput1",
+                        "description": "specialistInput1",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/schedule/getavailableSlot": {
+            "post": {
+                "tags": [
+                    "scheduling-controller"
+                ],
+                "summary": "Get available slots of specialist for a particular day",
+                "operationId": "getavailableSlotUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialistInput1",
+                        "description": "specialistInput1",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/schedule/getdayview": {
+            "post": {
+                "tags": [
+                    "scheduling-controller"
+                ],
+                "summary": "Get day view of particular specialization",
+                "operationId": "getdayviewUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialistInput1",
+                        "description": "specialistInput1",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/schedule/markavailability": {
+            "post": {
+                "tags": [
+                    "scheduling-controller"
+                ],
+                "summary": "Mark availability of specialist",
+                "operationId": "markavailabilityUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialistInput1",
+                        "description": "specialistInput1",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/schedule/monthview/{year}": {
+            "post": {
+                "tags": [
+                    "scheduling-controller"
+                ],
+                "summary": "Get available slots of specialist for a particular month",
+                "operationId": "viewUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialistInput1",
+                        "description": "specialistInput1",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "in": "path",
+                        "description": "year",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "month",
+                        "in": "path",
+                        "description": "month",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "day",
+                        "in": "path",
+                        "description": "day",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/schedule/monthview/{year}/{month}": {
+            "post": {
+                "tags": [
+                    "scheduling-controller"
+                ],
+                "summary": "Get available slots of specialist for a particular month",
+                "operationId": "viewUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialistInput1",
+                        "description": "specialistInput1",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "in": "path",
+                        "description": "year",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "month",
+                        "in": "path",
+                        "description": "month",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "day",
+                        "in": "path",
+                        "description": "day",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/schedule/monthview/{year}/{month}/{day}": {
+            "post": {
+                "tags": [
+                    "scheduling-controller"
+                ],
+                "summary": "Get available slots of specialist for a particular month",
+                "operationId": "viewUsingPOST_2",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialistInput1",
+                        "description": "specialistInput1",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "in": "path",
+                        "description": "year",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "month",
+                        "in": "path",
+                        "description": "month",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "day",
+                        "in": "path",
+                        "description": "day",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/schedule/unmarkavailability": {
+            "post": {
+                "tags": [
+                    "scheduling-controller"
+                ],
+                "summary": "Mark unavailability of specialist",
+                "operationId": "unmarkavailabilityUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialistInput1",
+                        "description": "specialistInput1",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/specialist/getSpecialist": {
+            "post": {
+                "tags": [
+                    "specialist-controller"
+                ],
+                "summary": "Fetch list of specialists",
+                "operationId": "getSpecialistUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialist",
+                        "description": "specialist",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Specialist"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/specialist/getSpecialistAll": {
+            "post": {
+                "tags": [
+                    "specialist-controller"
+                ],
+                "summary": "Fetch all specialists",
+                "operationId": "getSpecialistAllUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "specialist",
+                        "description": "specialist",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Specialist"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/specialist/info/{userID}": {
+            "get": {
+                "tags": [
+                    "specialist-controller"
+                ],
+                "summary": "Fetch user specialist",
+                "operationId": "infoUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "userID",
+                        "in": "path",
+                        "description": "userID",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/specialist/masterspecialization": {
+            "post": {
+                "tags": [
+                    "specialist-controller"
+                ],
+                "summary": "Fetch master specialization",
+                "operationId": "markavailabilityUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/van/getvan/{vanid}": {
+            "get": {
+                "tags": [
+                    "van-controller"
+                ],
+                "summary": "Fetch specialization by van id",
+                "operationId": "markavailabilityUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "vanid",
+                        "in": "path",
+                        "description": "vanid",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "LocalTime": {
+            "type": "object",
+            "properties": {
+                "hour": {
+                    "type": "string",
+                    "format": "byte"
+                },
+                "minute": {
+                    "type": "string",
+                    "format": "byte"
+                },
+                "nano": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "second": {
+                    "type": "string",
+                    "format": "byte"
+                }
+            }
+        },
+        "Specialist": {
+            "type": "object",
+            "properties": {
+                "contactNo": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "genderName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "middleName": {
+                    "type": "string"
+                },
+                "outputMapper": {
+                    "$ref": "#/definitions/OutputMapper"
+                },
+                "parkingPlaceID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "providerServiceMapID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "specialistAvailability": {
+                    "$ref": "#/definitions/SpecialistAvailability"
+                },
+                "specialization": {
+                    "type": "string"
+                },
+                "specializationID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "titleName": {
+                    "type": "string"
+                },
+                "userID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "userName": {
+                    "type": "string"
+                }
+            }
+        },
+        "SpecialistAvailability": {
+            "type": "object",
+            "properties": {
+                "configuredDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "createdDate": {
+                    "$ref": "#/definitions/Timestamp"
+                },
+                "deleted": {
+                    "type": "boolean"
+                },
+                "lastModDate": {
+                    "$ref": "#/definitions/Timestamp"
+                },
+                "modifiedBy": {
+                    "type": "string"
+                },
+                "outputMapper": {
+                    "$ref": "#/definitions/OutputMapper"
+                },
+                "processed": {
+                    "type": "string"
+                },
+                "slots": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Slot"
+                    }
+                },
+                "specialistAvailabilityID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "timeSlot": {
+                    "type": "string"
+                },
+                "userID": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "Slot": {
+            "type": "object",
+            "properties": {
+                "fromTime": {
+                    "$ref": "#/definitions/LocalTime"
+                },
+                "outputMapper": {
+                    "$ref": "#/definitions/OutputMapper"
+                },
+                "slot": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "toTime": {
+                    "$ref": "#/definitions/LocalTime"
+                }
+            }
+        },
+        "Timestamp": {
+            "type": "object",
+            "properties": {
+                "date": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "hours": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "minutes": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "month": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "nanos": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "seconds": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "time": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "year": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "OutputMapper": {
+            "type": "object"
+        }
+    }
+}
