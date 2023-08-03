@@ -1,0 +1,3759 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "MCTS APIs for AMRIT",
+        "version": "1.0",
+        "title": "MCTS APIs for AMRIT",
+        "contact": {
+            "name": "Wipro HCIT",
+            "url": "https://www.wipro.com",
+            "email": "mywipro@wipro.com"
+        }
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "basic-error-controller",
+            "description": "Basic Error Controller"
+        },
+        {
+            "name": "call-configuration-controller",
+            "description": "Call Configuration Controller"
+        },
+        {
+            "name": "call-count-controller",
+            "description": "Call Count Controller"
+        },
+        {
+            "name": "congenital-anomalies-controller",
+            "description": "Congenital Anomalies Controller"
+        },
+        {
+            "name": "feedback-controller",
+            "description": "Feedback Controller"
+        },
+        {
+            "name": "mcts-call-response-controller",
+            "description": "MCTS Call Response Controller"
+        },
+        {
+            "name": "mcts-data-handler-controller",
+            "description": "MCTS Data Handler Controller"
+        },
+        {
+            "name": "mcts-data-transaction-controller",
+            "description": "MCTS Data Transaction Controller"
+        },
+        {
+            "name": "mcts-identity-controller",
+            "description": "MCTS Identity Controller"
+        },
+        {
+            "name": "mcts-outbound-call-detail-controller",
+            "description": "MCTS Outbound Call Detail Controller"
+        },
+        {
+            "name": "mcts-report-controller",
+            "description": "MCTS Report Controller"
+        },
+        {
+            "name": "mcts-statewise-field-controller",
+            "description": "MCTS Statewise Field Controller"
+        },
+        {
+            "name": "outbound-call-controller",
+            "description": "Outbound Call Controller"
+        },
+        {
+            "name": "questionnaire-controller",
+            "description": "Questionnaire Controller"
+        },
+        {
+            "name": "version-controller",
+            "description": "Version Controller"
+        }
+    ],
+    "paths": {
+        "/callConfigurationController/delete/configuration": {
+            "post": {
+                "tags": [
+                    "call-configuration-controller"
+                ],
+                "summary": "Delete call configuration",
+                "operationId": "deleteConfigurationUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"mctsCallConfigID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/callConfigurationController/get/configuration/list": {
+            "post": {
+                "tags": [
+                    "call-configuration-controller"
+                ],
+                "summary": "Get call configuration list",
+                "operationId": "getCallConfigurationListUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"providerServiceMapID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/callConfigurationController/get/configuration/listForReport": {
+            "post": {
+                "tags": [
+                    "call-configuration-controller"
+                ],
+                "summary": "Get call configuration report",
+                "operationId": "getCallConfigurationListForReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"providerServiceMapID\":\"Integer\"},{\\\"endDate\\\":\\\"TimeStamp\\\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/callConfigurationController/get/ouboundcalltypes": {
+            "post": {
+                "tags": [
+                    "call-configuration-controller"
+                ],
+                "summary": "Get outbound call types",
+                "operationId": "getOutboundCallTypesUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"providerServiceMapID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/callConfigurationController/put/confignumbers": {
+            "post": {
+                "tags": [
+                    "call-configuration-controller"
+                ],
+                "summary": "Create call number configuration",
+                "operationId": "putConfigUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"providerServiceMapID\":\"Integer\", \"effectiveFrom\":\"Date\", \"effectiveUpto\":\"Date\", \"createdBy\":\"String- Name\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/callConfigurationController/put/configupdate": {
+            "post": {
+                "tags": [
+                    "call-configuration-controller"
+                ],
+                "summary": "Update call configuration",
+                "operationId": "putConfigUpdateUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"mctsCallConfigID\":\"Integer\", \"effectiveFrom\":\"Date\", \"effectiveUpto\":\"Date\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/callConfigurationController/put/configuration": {
+            "post": {
+                "tags": [
+                    "call-configuration-controller"
+                ],
+                "summary": "Create call configuration",
+                "operationId": "createConfigUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"providerServiceMapID\":\"Integer\", \"effectiveFrom\":\"Date\", \"effectiveUpto\":\"Date\", \"createdBy\":\"String- Name\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/callConfigurationController/put/configuration/update": {
+            "post": {
+                "tags": [
+                    "call-configuration-controller"
+                ],
+                "summary": "Update call configuration",
+                "operationId": "putConfigurationUpdateUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"providerServiceMapID\":\"Integer\", \"createdDate\":\"Date\", \"effectiveUpto\":\"Date\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/callCountController/getCallAnsweredCount": {
+            "post": {
+                "tags": [
+                    "call-count-controller"
+                ],
+                "summary": "Get count of answered calls",
+                "operationId": "getCallAnsweredCountUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "outboundCallAnsweredCountDetail",
+                        "description": "{\"providerServiceMapID\":\"Integer \", \"agentID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/OutboundCallAnsweredCountDetail"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/callCountController/getCallVerifiedCount": {
+            "post": {
+                "tags": [
+                    "call-count-controller"
+                ],
+                "summary": "Get count of verified calls",
+                "operationId": "getCallVerifiedCountUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "outboundCallAnsweredCountDetail",
+                        "description": "{\"providerServiceMapID\":\"Integer \", \"agentID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/OutboundCallAnsweredCountDetail"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/congenitalAnomaliesController/get/child/conganomolies": {
+            "post": {
+                "tags": [
+                    "congenital-anomalies-controller"
+                ],
+                "summary": "getchildCA",
+                "operationId": "getchildCAUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"childID\":\"Integer \"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/congenitalAnomaliesController/get/conganomolies": {
+            "post": {
+                "tags": [
+                    "congenital-anomalies-controller"
+                ],
+                "summary": "getCongAnomolies",
+                "operationId": "getCongAnomoliesUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/error": {
+            "get": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "error",
+                "operationId": "errorUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "head": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "error",
+                "operationId": "errorUsingHEAD",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "error",
+                "operationId": "errorUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "error",
+                "operationId": "errorUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "error",
+                "operationId": "errorUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "options": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "error",
+                "operationId": "errorUsingOPTIONS",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "basic-error-controller"
+                ],
+                "summary": "error",
+                "operationId": "errorUsingPATCH",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/feedbackController/complaint/list": {
+            "post": {
+                "tags": [
+                    "feedback-controller"
+                ],
+                "summary": "Get feedback list",
+                "operationId": "feedBackListUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"beneficiaryRegID\":\"Integer \"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsCallResponseController/get/call/response": {
+            "post": {
+                "tags": [
+                    "mcts-call-response-controller"
+                ],
+                "summary": "Get MCTS call response",
+                "operationId": "getMctsCallResponseUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"callDetailID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsCallResponseController/put/call/response": {
+            "post": {
+                "tags": [
+                    "mcts-call-response-controller"
+                ],
+                "summary": "Save MCTS call response",
+                "operationId": "putMctsCallResponseUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"callDetailID\":\"Integer\", \"questionID\":\"Integer\", \"answer\":\"String \", \"remark\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsCallResponseController/update/call/response": {
+            "post": {
+                "tags": [
+                    "mcts-call-response-controller"
+                ],
+                "summary": "Update MCTS call response",
+                "operationId": "updateMctsCallResponseUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"mctsCallResponseID\":\"Integer\", \"answer\":\"String \", \"remark\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsDataHandlerController/mcts/data/upload": {
+            "post": {
+                "tags": [
+                    "mcts-data-handler-controller"
+                ],
+                "summary": "Upload data in MCTS",
+                "operationId": "uploadDataUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsDataHandlerController/mcts/data/upload/status": {
+            "post": {
+                "tags": [
+                    "mcts-data-handler-controller"
+                ],
+                "summary": "Upload status in MCTS",
+                "operationId": "uploadstatusUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"providerServiceMapID\":\"Integer - provider service ID\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsDataHandlerController/update/beneficiary/data": {
+            "post": {
+                "tags": [
+                    "mcts-data-handler-controller"
+                ],
+                "summary": "Update beneficiary data in MCTS",
+                "operationId": "updateBeneficiaryUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "query",
+                        "description": "request",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsOutboundCallDetailController/case/sheet": {
+            "post": {
+                "tags": [
+                    "mcts-outbound-call-detail-controller"
+                ],
+                "summary": "Get case record",
+                "operationId": "caseSheetUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"callDetailID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsOutboundCallDetailController/get/benificiary/details": {
+            "post": {
+                "tags": [
+                    "mcts-outbound-call-detail-controller"
+                ],
+                "summary": "Get beneficiary details",
+                "operationId": "getBeneficiaryDetailsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"beneficiaryRegID\":\"Integer \"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsOutboundCallDetailController/get/change/log": {
+            "post": {
+                "tags": [
+                    "mcts-outbound-call-detail-controller"
+                ],
+                "summary": "Get change log",
+                "operationId": "getChangeLogUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"childID or mothetID\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsOutboundCallDetailController/put/call/history": {
+            "post": {
+                "tags": [
+                    "mcts-outbound-call-detail-controller"
+                ],
+                "summary": "Create call history",
+                "operationId": "getVariablesUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"czentrixCallID\":\"String\", \"allocatedUserID\":\"Integer \"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsOutboundCallDetailController/put/sms/advice": {
+            "post": {
+                "tags": [
+                    "mcts-outbound-call-detail-controller"
+                ],
+                "summary": "Send SMS advice",
+                "operationId": "sendSmsAdviseUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"smsAdvice\":\"String\", \"callDetailID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getCallAnsweredReport": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get MCTS answered call report",
+                "operationId": "getCallAnsweredReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"userID\":\"Integer\", \"callTypeName\":\"Answered or Not Answered\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getCallDetailReport": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get MCTS call detail report",
+                "operationId": "getCallDetailReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"userID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getCallDetailReportUnique": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get MCTS unique call detail report",
+                "operationId": "getCallDetailReportUniqueUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"userID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getCallNotAnsweredReport": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get MCTS unanswered call report",
+                "operationId": "getCallNotAnsweredReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"userID\":\"Integer\", \"callTypeName\":\"Answered or Not Answered\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getComplaintReport": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get MCTS complaint report",
+                "operationId": "getComplaintReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"userID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getCongenitalAnomaliesReport": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get congenital anomalies report",
+                "operationId": "getCongenitalAnomaliesReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"userID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getDailyReport": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get MCTS daily report",
+                "operationId": "getDailyReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"userID\":\"Integer\", \"isMother\":\"Boolean\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getDataReport": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get MCTS data report",
+                "operationId": "getDataReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"isMother\":\"Boolean\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getHighRiskReport": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get MCTS high risk report",
+                "operationId": "getHighRiskReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"userID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getInvalidRecordReport": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get MCTS invalid record report",
+                "operationId": "getInvalidRecordReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"isMother\":\"Boolean\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsReportController/getNHMReport": {
+            "post": {
+                "tags": [
+                    "mcts-report-controller"
+                ],
+                "summary": "Get NHM report",
+                "operationId": "getNHMReportUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "jsonRequest",
+                        "description": "{\"startDate\":\"Timestamp\", \"endDate\":\"Timestamp\", \"providerServiceMapID\":\"Integer \", \"userID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsStatewiseFieldsController/get/variablenames": {
+            "post": {
+                "tags": [
+                    "mcts-statewise-field-controller"
+                ],
+                "summary": "Get variables based on provider service map id and field",
+                "operationId": "getVariablesUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"providerServiceMapID\":\"Integer\", \"fieldFor\":\"String Name\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsdatatransactioncontroller/associate/beneficiaryID": {
+            "post": {
+                "tags": [
+                    "mcts-data-transaction-controller"
+                ],
+                "summary": "Associate beneficiary id",
+                "operationId": "associateBeneficiaryIDUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"mCTSID_no\":\"Integer\", \"beneficiaryRegID\":\"String \"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsdatatransactioncontroller/edit/mctsdata": {
+            "post": {
+                "tags": [
+                    "mcts-data-transaction-controller"
+                ],
+                "summary": "Update MCTS data",
+                "operationId": "updateDataUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsidentitycontroller/create/beneficiary": {
+            "post": {
+                "tags": [
+                    "mcts-identity-controller"
+                ],
+                "summary": "Create beneficiary",
+                "operationId": "createBeneficiariesUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"firstName\":\"String\", \"lastName\":\"String \", \"contactNumber\":\"String \", \"stateID\":\"Integer \", \"districtID\":\"Integer \", \"createdBy\":\"String \", \"providerServiceMapID\":\"Integer \", \"vanID\":\"Integer \", \"genderID\":\"Integer \"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsidentitycontroller/get/beneficiaryid": {
+            "post": {
+                "tags": [
+                    "mcts-identity-controller"
+                ],
+                "summary": "Get beneficiary id",
+                "operationId": "getBeneficiaryIDUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"beneficiaryRegID\":\"Integer \"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/mctsidentitycontroller/search/beneficiary": {
+            "post": {
+                "tags": [
+                    "mcts-identity-controller"
+                ],
+                "summary": "Search beneficiary",
+                "operationId": "searchBeneficiariesUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"firstName\":\"String\", \"lastName\":\"String \", \"contactNumber\":\"String \"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/get/call/history": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Get call history",
+                "operationId": "getCallHistoryUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"childID or motherID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/get/next/anc/pnc": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Get next call date",
+                "operationId": "getNextANC_PNCUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"childID or motherID\":\"Integer\", \"outboundCallType\":\"ANC or PNC\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/get/reallocated/calls": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Get count of reallocated calls",
+                "operationId": "getReallocateCallsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"callDateFrom\":\"Date\", \"callDateTo\":\"Date\", \"userID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/get/unallocatedcalls": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Get count of unallocated calls",
+                "operationId": "getUnallocatedCallsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"callDateFrom\":\"Date\", \"callDateTo\":\"Date\", \"providerServiceMapID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/get/updated/object": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Get updated record",
+                "operationId": "getUpdatedObjectUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"obCallID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/getChildWorklist": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Get child worklist for given userID",
+                "operationId": "getChildWorklistUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"allocatedUserID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/getHighRiskReason": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Get high risk reason",
+                "operationId": "getHighRiskReasonUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/getMotherWorklist": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Get mother worklist for given userID",
+                "operationId": "getMotherWorklistUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"allocatedUserID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/move/calls/tobucket": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Move calls to bucket",
+                "operationId": "moveToBucketUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"obCallID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/put/agentcallallocate": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Get count of allocated calls",
+                "operationId": "agentCallAllocationUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"obCallID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/outbondcallcontroller/put/call/closure": {
+            "post": {
+                "tags": [
+                    "outbound-call-controller"
+                ],
+                "summary": "Save details on call closure",
+                "operationId": "putCallHistoryUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/delete/interaction": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Delete interaction",
+                "operationId": "deleteInteractionUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"mctsQAMapID\":\"Integer\")}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/delete/multipleQuestion": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Delete multiple questions",
+                "operationId": "deleteMultipleQuestionsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/delete/question": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Delete question",
+                "operationId": "updateQuestionUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"questionID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/derived/addDeriveQuestion": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Add derived question",
+                "operationId": "deriveQuestionUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"questionID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/edit/interaction": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Update interaction",
+                "operationId": "editInteractionUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"mctsQAMapID\":\"Integer\", \"interaction\":\"String Value\", \"variableName\":\"String-Name \", \"variableDataType\":\"String- Name\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/edit/questionnaire": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Edit questionnaire",
+                "operationId": "editQuestionnaireUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"questionID\":\"Integer\", \"question\":\"String Value\", \"answerType\":\"String-Name \", \"triggerFeedback\":\"Boolean- Value\", \"triggerFeedbackFor\":\"String-Value\", \"showText\":\"Boolean- Value\", \"showTextFor\":\"String-Value\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/get/agentQuestionnaireList": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Get agent outbound question list",
+                "operationId": "outboundQuestionListAgentUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/get/interaction/list": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Fetch interaction list",
+                "operationId": "interactionsListUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"questionID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/get/questionnaireList": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Get outbound question list",
+                "operationId": "outboundQuestionListUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/put/interactions": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Save interactions",
+                "operationId": "addInteractionsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/questionnaireController/put/outboundcall/questions": {
+            "post": {
+                "tags": [
+                    "questionnaire-controller"
+                ],
+                "summary": "Create outbound questions",
+                "operationId": "createOutBoundQuestionsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/version": {
+            "get": {
+                "tags": [
+                    "version-controller"
+                ],
+                "summary": "Get version",
+                "operationId": "versionInformationUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ModelAndView": {
+            "type": "object",
+            "properties": {
+                "empty": {
+                    "type": "boolean"
+                },
+                "model": {
+                    "type": "object"
+                },
+                "modelMap": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "object"
+                    }
+                },
+                "reference": {
+                    "type": "boolean"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "100",
+                        "101",
+                        "102",
+                        "103",
+                        "200",
+                        "201",
+                        "202",
+                        "203",
+                        "204",
+                        "205",
+                        "206",
+                        "207",
+                        "208",
+                        "226",
+                        "300",
+                        "301",
+                        "302",
+                        "303",
+                        "304",
+                        "305",
+                        "307",
+                        "308",
+                        "400",
+                        "401",
+                        "402",
+                        "403",
+                        "404",
+                        "405",
+                        "406",
+                        "407",
+                        "408",
+                        "409",
+                        "410",
+                        "411",
+                        "412",
+                        "413",
+                        "414",
+                        "415",
+                        "416",
+                        "417",
+                        "418",
+                        "419",
+                        "420",
+                        "421",
+                        "422",
+                        "423",
+                        "424",
+                        "426",
+                        "428",
+                        "429",
+                        "431",
+                        "451",
+                        "500",
+                        "501",
+                        "502",
+                        "503",
+                        "504",
+                        "505",
+                        "506",
+                        "507",
+                        "508",
+                        "509",
+                        "510",
+                        "511"
+                    ]
+                },
+                "view": {
+                    "$ref": "#/definitions/View"
+                },
+                "viewName": {
+                    "type": "string"
+                }
+            },
+            "title": "ModelAndView"
+        },
+        "OutboundCallAnsweredCountDetail": {
+            "type": "object",
+            "properties": {
+                "agentID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "createdDate": {
+                    "$ref": "#/definitions/Timestamp"
+                },
+                "providerServiceMapID": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "title": "OutboundCallAnsweredCountDetail"
+        },
+        "Timestamp": {
+            "type": "object",
+            "properties": {
+                "date": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "hours": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "minutes": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "month": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "nanos": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "seconds": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "time": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "year": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "title": "Timestamp"
+        },
+        "View": {
+            "type": "object",
+            "properties": {
+                "contentType": {
+                    "type": "string"
+                }
+            },
+            "title": "View"
+        }
+    }
+}

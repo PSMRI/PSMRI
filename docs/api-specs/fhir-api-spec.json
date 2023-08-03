@@ -1,0 +1,1613 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Service that implements FHIR standard for healthcare information exchange between various systems that are used by clinicians and organisations.",
+        "version": "1.0",
+        "title": "FHIR API",
+        "termsOfService": "Terms of service",
+        "contact": {
+            "name": "AMRIT",
+            "url": "https://psmri.github.io/PSMRI/",
+            "email": "amrit@piramalswasthya.org"
+        },
+        "license": {}
+    },
+    "host": "localhost:7078",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "health-id-validate-controller",
+            "description": "Health ID Validate Controller"
+        },
+        {
+            "name": "patient-data-gateway-controller",
+            "description": "Patient Data Gateway Controller"
+        },
+        {
+            "name": "create-health-id-with-mobile-otp",
+            "description": "Create Health ID With Mobile OTP"
+        },
+        {
+            "name": "e-aushadhi-controller",
+            "description": "E Aushadhi Controller"
+        },
+        {
+            "name": "care-context-controller",
+            "description": "Care Context Controller"
+        },
+        {
+            "name": "create-health-id-with-uid",
+            "description": "Create Health ID With UID"
+        },
+        {
+            "name": "higher-health-facility-controller",
+            "description": "Higher Health Facility Controller"
+        },
+        {
+            "name": "resource-request-gateway",
+            "description": "Resource Request Gateway"
+        },
+        {
+            "name": "test",
+            "description": "Test"
+        },
+        {
+            "name": "generate-health-id-card-controller",
+            "description": "Generate Health ID Card Controller"
+        }
+    ],
+    "paths": {
+        "/careContext/addCarecontextToMongo": {
+            "post": {
+                "tags": [
+                    "care-context-controller"
+                ],
+                "summary": "Add care context to Mongo",
+                "operationId": "saveCareContextToMongoUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/careContext/generateOTPForCareContext": {
+            "post": {
+                "tags": [
+                    "care-context-controller"
+                ],
+                "summary": "Generate OTP for care context linking",
+                "operationId": "generateOTPUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"healthID\":\"String\",\"authenticationMode\":\"String\",\"healthIdNumber\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/careContext/validateOTPAndCreateCareContext": {
+            "post": {
+                "tags": [
+                    "care-context-controller"
+                ],
+                "summary": "Validate OTP and create care context",
+                "operationId": "validateOTPAndCreateCareContextUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"healthID\":\"String\",\"visitCode\\\":\\\"String\\\",\"beneficiaryID\\\":\\\"String\\\",\"beneficiaryRegID\\\":\\\"String\\\",\"otp\\\":\\\"String\\\",\\\"txnId\\\":\\\"String\\\",\\\"visitcategory\\\":\\\"String\\\",\"healthIdNumber\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/eAushadhi/getFacilityStockProcessLog": {
+            "post": {
+                "tags": [
+                    "e-aushadhi-controller"
+                ],
+                "summary": "Get log for stock processing",
+                "operationId": "getFacilityStockProcessLogUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/eAushadhi/getStoreStockDetails": {
+            "post": {
+                "tags": [
+                    "e-aushadhi-controller"
+                ],
+                "summary": "Getting store stock details from e-aushadhi",
+                "operationId": "getStoreStockDetailsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"facilityID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/eAushadhi/syncDrugDispenseDetails": {
+            "post": {
+                "tags": [
+                    "e-aushadhi-controller"
+                ],
+                "summary": "Sync drug dispense data and patient details with e-aushadhi",
+                "operationId": "syncDrugDispenseAndPatientDetailsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"eAushadhiFacilityId\":\"Integer\",\"pageNo\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/eAushadhi/updatePatientIssueSyncStatus": {
+            "post": {
+                "tags": [
+                    "e-aushadhi-controller"
+                ],
+                "summary": "Sync e-aushadhi for patient issue details",
+                "operationId": "addFacilityUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/feeds/parse/feed/ATOM": {
+            "post": {
+                "tags": [
+                    "test"
+                ],
+                "summary": "Test parse ATOM Feeds",
+                "operationId": "parseFeedsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "resourceRequestHandler",
+                        "description": "resourceRequestHandler",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ResourceRequestHandler"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/get/resource/DiagnosticReportRecord": {
+            "post": {
+                "tags": [
+                    "resource-request-gateway"
+                ],
+                "summary": "Get diagnostic report record bundle",
+                "operationId": "getDiagnosticReportRecordUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "patientResourceRequest",
+                        "description": "patientResourceRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ResourceRequestHandler"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/get/resource/OPConsultRecord": {
+            "post": {
+                "tags": [
+                    "resource-request-gateway"
+                ],
+                "summary": "Get OP consult record bundle",
+                "operationId": "getPatientResourceUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "patientResourceRequest",
+                        "description": "patientResourceRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ResourceRequestHandler"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/get/resource/PrescriptionRecord": {
+            "post": {
+                "tags": [
+                    "resource-request-gateway"
+                ],
+                "summary": "Get prescription record",
+                "operationId": "getPrescriptionRecordUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "patientResourceRequest",
+                        "description": "patientResourceRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ResourceRequestHandler"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthID/generateOTP": {
+            "post": {
+                "tags": [
+                    "create-health-id-with-mobile-otp"
+                ],
+                "summary": "generate OTP",
+                "operationId": "generateOTPUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"mobile\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthID/getBenhealthID": {
+            "post": {
+                "tags": [
+                    "create-health-id-with-mobile-otp"
+                ],
+                "summary": "Get Beneficiary ABHA details",
+                "operationId": "getBenhealthIDUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "comingRequest",
+                        "description": "{\"beneficiaryRegID\":\"Long\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthID/mapHealthIDToBeneficiary": {
+            "post": {
+                "tags": [
+                    "create-health-id-with-mobile-otp"
+                ],
+                "summary": "Map ABHA to beneficiary",
+                "operationId": "mapHealthIDToBeneficiaryUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"beneficiaryRegID\":\"Long\",\"beneficiaryID\":\"Long\",\"healthId\":\"String\",\"healthIdNumber\":\"String\"providerServiceMapId\":\"Integer\",\"createdBy\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthID/verifyOTPAndGenerateHealthID": {
+            "post": {
+                "tags": [
+                    "create-health-id-with-mobile-otp"
+                ],
+                "summary": "verify OTP and generate ABHA",
+                "operationId": "verifyOTPAndGenerateHealthIDUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"otp\":\"String\",\"txnId\":\"String\",\"address\":\"String\",\"dayOfBirth\":\"String\",\"email\":\"String\",\"healthId\":\"String\",\"healthIdNumber\":\"String\",\"firstName\":\"String\",\"gender\":\"String\",\"lastName\":\"String\",\"monthOfBirth\":\"String\",\"name\":\"String\",\"pincode\":\"Integer\",\"yearOfBirth\":\"String\",\"providerServiceMapId\":\"Integer\",\"createdBy\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthIDCard/generateOTP": {
+            "post": {
+                "tags": [
+                    "generate-health-id-card-controller"
+                ],
+                "summary": "Generate OTP for ABHA card",
+                "operationId": "mapHealthIDToBeneficiaryUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"authMethod\":\"String\",\"healthid\":\"String\",\"healthIdNumber\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthIDCard/verifyOTPAndGenerateHealthCard": {
+            "post": {
+                "tags": [
+                    "generate-health-id-card-controller"
+                ],
+                "summary": "Generate OTP for ABHA card",
+                "operationId": "verifyOTPAndGenerateHealthCardUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"otp\":\"String\",\"txnId\":\"String\",\"authMethod\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthIDWithUID/checkAndGenerateMobileOTP": {
+            "post": {
+                "tags": [
+                    "create-health-id-with-uid"
+                ],
+                "summary": "Check and generate OTP",
+                "operationId": "checkAndGenerateMobileOTPUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"mobile\":\"String\", \"txnId\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthIDWithUID/createHealthIDWithUID": {
+            "post": {
+                "tags": [
+                    "create-health-id-with-uid"
+                ],
+                "summary": "Create ABHA with UID",
+                "operationId": "createHealthIDWithUIDUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"otp\":\"String\",\"txnId\":\"String\",\"address\":\"String\",\"dayOfBirth\":\"String\",\"email\":\"String\",\"profilePhoto\":\"String\",\"password\":\"String\",\"healthId\":\"String\",\"healthIdNumber\":\"String\",\"firstName\":\"String\",\"gender\":\"String\",\"lastName\":\"String\",\"middleName\":\"String\",\"monthOfBirth\":\"String\",\"name\":\"String\",\"pincode\":\"Integer\",\"yearOfBirth\":\"String\",\"providerServiceMapId\":\"Integer\",\"createdBy\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthIDWithUID/generateOTP": {
+            "post": {
+                "tags": [
+                    "create-health-id-with-uid"
+                ],
+                "summary": "Generate OTP",
+                "operationId": "generateOTPUsingPOST_2",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"mobile\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthIDWithUID/verifyMobileOTP": {
+            "post": {
+                "tags": [
+                    "create-health-id-with-uid"
+                ],
+                "summary": "Verify mobile OTP",
+                "operationId": "verifyMobileOTPUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"mobileOTP\":\"String\", \"txnId\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/healthIDWithUID/verifyOTP": {
+            "post": {
+                "tags": [
+                    "create-health-id-with-uid"
+                ],
+                "summary": "Verify OTP",
+                "operationId": "verifyOTPUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"OTP\":\"String\", \"txnId\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/higher/health/facility/get/clinical/data": {
+            "post": {
+                "tags": [
+                    "higher-health-facility-controller"
+                ],
+                "summary": "Get clinical data from higher health facility",
+                "operationId": "getCLinicalDataHigherhealthFacilityUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "resourceRequestHandler",
+                        "description": "resourceRequestHandler",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ResourceRequestHandler"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/higher/health/facility/update/bengenid": {
+            "post": {
+                "tags": [
+                    "higher-health-facility-controller"
+                ],
+                "summary": "Update beneficiary id for higher health facility",
+                "operationId": "feedPatientDemographicDataUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "resourceRequestHandler",
+                        "description": "resourceRequestHandler",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ResourceRequestHandler"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/patient/data/profile/search/demographic": {
+            "post": {
+                "tags": [
+                    "patient-data-gateway-controller"
+                ],
+                "summary": "Patient profile search from Mongo, search parameter - healthId, healthIdNo, amritId, externalId, phoneNo, state, district, village",
+                "operationId": "patientDataSearchFromMongoUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "resourceRequestHandler",
+                        "description": "resourceRequestHandler",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ResourceRequestHandler"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/patient/data/searchWithPagination/{pageNo}": {
+            "get": {
+                "tags": [
+                    "patient-data-gateway-controller"
+                ],
+                "summary": "Patient profile search from Mongo, all data based on page no",
+                "operationId": "patientDataSearchFromMongoPaginationUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "pageNo",
+                        "in": "path",
+                        "description": "pageNo",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/validate/generateOTPForHealthIDValidation": {
+            "post": {
+                "tags": [
+                    "health-id-validate-controller"
+                ],
+                "summary": "Generate OTP for ABHA validation",
+                "operationId": "generateOTPForHealthIDValidationUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"healthID\":\"String\",\"isValidate\":\"Boolean\",\"authenticationMode\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/validate/verifyOTPForHealthIDValidation": {
+            "post": {
+                "tags": [
+                    "health-id-validate-controller"
+                ],
+                "summary": "Verify OTP for ABHA validation",
+                "operationId": "verifyOTPForHealthIDValidationUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "{\"otp\":\"String\",\"txnId\":\"String\",\"healthID\":\"String\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ResourceRequestHandler": {
+            "type": "object",
+            "properties": {
+                "amritId": {
+                    "type": "string"
+                },
+                "benFlowID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "beneficiaryID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "beneficiaryRegID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "district": {
+                    "type": "string"
+                },
+                "externalId": {
+                    "type": "string"
+                },
+                "healthId": {
+                    "type": "string"
+                },
+                "healthIdNumber": {
+                    "type": "string"
+                },
+                "pageNo": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "phoneNo": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "village": {
+                    "type": "string"
+                },
+                "visitCode": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        }
+    }
+}
