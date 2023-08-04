@@ -1,2 +1,3 @@
 jinja2
 mkdocs
+mkdocs-swagger-ui-tag
