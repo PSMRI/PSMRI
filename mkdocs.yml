@@ -30,6 +30,7 @@ nav:
         - License : about/license.md
     - API-Reference :
         - Admin : api-reference/admin-api-spec.md
+        - BeneficiaryId : api-reference//beneficiaryid-generation-api-specs.md
         - Common : api-reference/common-api-spec.md
         - ECD : api-reference/ecd-api-spec.md
         - FHIR : api-reference/fhir-api-spec.md
