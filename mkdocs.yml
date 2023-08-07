@@ -49,4 +49,4 @@ plugins :
     - swagger-ui-tag    
 
 layout:
-  docExpansion: none    
+  docExpansion: none
