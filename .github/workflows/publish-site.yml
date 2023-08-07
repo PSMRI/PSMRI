@@ -38,10 +38,13 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Install dependencies
-        run: python3 -m pip install -r ./requirements.txt
-
-      - run: mkdocs build
-      - run: echo "${{ github.ref }}"
+        run: |
+            python3 -m pip install -r ./requirements.txt
+            pip install mkdocs-swagger-ui-tag
+            pip install mkdocs-material
+            mkdocs build
+            echo "${{ github.ref }}"
+      
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
