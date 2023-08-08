@@ -1,0 +1,1 @@
+<swagger-ui src="./../api-specs/beneficiaryid-generation-api-specs.json">
