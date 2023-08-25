@@ -20,8 +20,8 @@
             "description": "CRM Report Controller"
         },
         {
-            "name": "diabetes-and-hypertension-screening-controller",
-            "description": "Diabetes And Hypertension Screening Controller"
+            "name": "diabetes-and-hypertension-controller",
+            "description": "Diabetes And Hypertension Controller"
         },
         {
             "name": "worklist-controller",
