@@ -50,12 +50,12 @@
             "description": "Covid Vaccination Controller"
         },
         {
-            "name": "customer-relationship-management-reports",
-            "description": "Customer Relationship Management Reports"
+            "name": "customer-relationship-reports",
+            "description": "Customer Relationship Reports"
         },
         {
-            "name": "customer-relationship-management-secondary-reports",
-            "description": "Customer Relationship Management Secondary Reports"
+            "name": "customer-relationship-secondary-reports",
+            "description": "Customer Relationship Secondary Reports"
         },
         {
             "name": "directory-controller",
@@ -118,8 +118,8 @@
             "description": "Lonic Controller"
         },
         {
-            "name": "national-health-mission-dashboard-controller",
-            "description": "National Health Mission Dashboard Controller"
+            "name": "national-health-mission-controller",
+            "description": "National Health Mission Controller"
         },
         {
             "name": "notification-controller",

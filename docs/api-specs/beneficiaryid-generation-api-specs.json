@@ -1,0 +1,113 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This service is used to generate unique beneficiary registration Id for new beneficiaries.",
+        "version": "1.0",
+        "title": "BeneficiaryID-Generation API",
+        "termsOfService": "Terms of service",
+        "contact": {
+            "name": "AMRIT",
+            "url": "https://psmri.github.io/PSMRI/",
+            "email": "amrit@piramalswasthya.org"
+        },
+        "license": {}
+    },
+    "host": "localhost:7078",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "version-controller",
+            "description": "Version Controller"
+        },
+        {
+            "name": "generate-beneficiary-controller",
+            "description": "Generate Beneficiary Controller"
+        }
+    ],
+    "paths": {
+        "/generateBeneficiaryController/generateBeneficiaryIDs": {
+            "post": {
+                "tags": [
+                    "generate-beneficiary-controller"
+                ],
+                "summary": "Generate beneficiary Ids",
+                "operationId": "getBeneficiaryIDsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "param0",
+                        "description": "{\"benIDRequired\":\"Integer\",\"vanID\":\"Integer\"}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/version": {
+            "get": {
+                "tags": [
+                    "version-controller"
+                ],
+                "summary": "Version Information",
+                "operationId": "versionInformationUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+    }
+}
