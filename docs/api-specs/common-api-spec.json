@@ -118,8 +118,8 @@
             "description": "Lonic Controller"
         },
         {
-            "name": "national-health-dashboard-controller",
-            "description": "National Health Dashboard Controller"
+            "name": "national-health-mission-controller",
+            "description": "National Health Mission Controller"
         },
         {
             "name": "notification-controller",
