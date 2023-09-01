@@ -48,7 +48,7 @@
             "description": "NCD Care Controller"
         },
         {
-            "name": "childhood-and-adolescence-controller",
+            "name": "childhood-adolescence-controller",
             "description": "Childhood And Adolescence Controller"
         },
         {
@@ -4173,7 +4173,7 @@
         "/child-adolescent-care/getBenCaseRecordFromDoctor": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Get child adolescent care beneficiary details entered by doctor",
                 "operationId": "getBenCaseRecordFromDoctorUsingPOST",
@@ -4226,7 +4226,7 @@
         "/child-adolescent-care/getBenHistoryDetails": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Get child adolescent care beneficiary history",
                 "operationId": "getBenHistoryDetailsUsingPOST",
@@ -4279,7 +4279,7 @@
         "/child-adolescent-care/getBenImmunizationServiceDetails": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Get child adolescent care beneficiary immunization details",
                 "operationId": "getBenImmunizationServiceDetailsUsingPOST",
@@ -4332,7 +4332,7 @@
         "/child-adolescent-care/getBenVisitDetailsFrmNurseCAC": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Get beneficiary visit details from nurse for child adolescent care",
                 "operationId": "getBenVisitDetailsFrmNurseCACUsingPOST",
@@ -4385,7 +4385,7 @@
         "/child-adolescent-care/getBenVitalDetailsFrmNurse": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Get child adolescent care beneficiary vitals from nurse",
                 "operationId": "getBenVitalDetailsFrmNurseUsingPOST",
@@ -4438,7 +4438,7 @@
         "/child-adolescent-care/save/doctorData": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Save child adolescent care doctor data",
                 "operationId": "saveDoctorDataCACUsingPOST",
@@ -4492,7 +4492,7 @@
         "/child-adolescent-care/save/nurseData": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Save child adolescent care (CAC) nurse data",
                 "operationId": "saveBenNurseDataCACUsingPOST",
@@ -4546,7 +4546,7 @@
         "/child-adolescent-care/update/BirthAndImmunizationHistoryScreen": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Update birth and immunization history",
                 "operationId": "updateBirthAndImmunizationHistoryNurseUsingPOST",
@@ -4599,7 +4599,7 @@
         "/child-adolescent-care/update/ImmunizationServicesScreen": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Update immunization service data",
                 "operationId": "updateImmunizationServicesNurseUsingPOST",
@@ -4652,7 +4652,7 @@
         "/child-adolescent-care/update/doctorData": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Update child adolescent care doctor data",
                 "operationId": "updateCACDoctorDataUsingPOST",
@@ -4706,7 +4706,7 @@
         "/child-adolescent-care/update/vitalScreen": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Update child adolescent care beneficiary vitals",
                 "operationId": "updateVitalNurseCACUsingPOST",
