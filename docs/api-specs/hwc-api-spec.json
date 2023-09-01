@@ -20,7 +20,7 @@
             "description": "CRM Report Controller"
         },
         {
-            "name": "diabetes-and-hypertension-controller",
+            "name": "diabetes-hypertension-controller",
             "description": "Diabetes And Hypertension Controller"
         },
         {
@@ -12435,7 +12435,7 @@
         "/screeningOutcome/diabetes": {
             "post": {
                 "tags": [
-                    "diabetes-and-hypertension-screening-controller"
+                    "diabetes-hypertension-controller"
                 ],
                 "summary": "Evaluate diabetes screening outcome",
                 "operationId": "getDiabetesOutcomeUsingPOST",
@@ -12488,7 +12488,7 @@
         "/screeningOutcome/hypertension": {
             "post": {
                 "tags": [
-                    "diabetes-and-hypertension-screening-controller"
+                    "diabetes-hypertension-controller"
                 ],
                 "summary": "Evaluate hypertension screening outcome",
                 "operationId": "getHypertensionOutcomeUsingPOST",
