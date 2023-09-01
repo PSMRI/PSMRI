@@ -55,7 +55,10 @@
             "name": "institution-controller",
             "description": "Institution Controller"
         },
-        
+        {
+            "name": "basic-error-controller",
+            "description": "Basic Error Controller"
+        },
         {
             "name": "calltype-controller",
             "description": "Calltype Controller"
@@ -501,7 +504,7 @@
         "/error": {
             "get": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "errorHtml",
                 "operationId": "errorHtmlUsingGET",
@@ -531,7 +534,7 @@
             },
             "head": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "errorHtml",
                 "operationId": "errorHtmlUsingHEAD",
@@ -561,7 +564,7 @@
             },
             "post": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "errorHtml",
                 "operationId": "errorHtmlUsingPOST",
@@ -594,7 +597,7 @@
             },
             "put": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "errorHtml",
                 "operationId": "errorHtmlUsingPUT",
@@ -627,7 +630,7 @@
             },
             "delete": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "errorHtml",
                 "operationId": "errorHtmlUsingDELETE",
@@ -657,7 +660,7 @@
             },
             "options": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "errorHtml",
                 "operationId": "errorHtmlUsingOPTIONS",
@@ -687,7 +690,7 @@
             },
             "patch": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "errorHtml",
                 "operationId": "errorHtmlUsingPATCH",

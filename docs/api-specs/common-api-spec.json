@@ -13,7 +13,10 @@
     "host": "localhost:7078",
     "basePath": "/",
     "tags": [
-        
+        {
+            "name": "basic-error-controller",
+            "description": "Basic Error Controller"
+        },
         {
             "name": "beneficiary-registration-controller",
             "description": "Beneficiary Registration Controller"
@@ -5037,7 +5040,7 @@
         "/error": {
             "get": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "error",
                 "operationId": "errorUsingGET",
@@ -5067,7 +5070,7 @@
             },
             "head": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "error",
                 "operationId": "errorUsingHEAD",
@@ -5100,7 +5103,7 @@
             },
             "post": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "error",
                 "operationId": "errorUsingPOST",
@@ -5136,7 +5139,7 @@
             },
             "put": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "error",
                 "operationId": "errorUsingPUT",
@@ -5172,7 +5175,7 @@
             },
             "delete": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "error",
                 "operationId": "errorUsingDELETE",
@@ -5202,7 +5205,7 @@
             },
             "options": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "error",
                 "operationId": "errorUsingOPTIONS",
@@ -5235,7 +5238,7 @@
             },
             "patch": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
                 "summary": "error",
                 "operationId": "errorUsingPATCH",
