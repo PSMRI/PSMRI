@@ -12,16 +12,12 @@
         },
         "license": {}
     },
-    "host": "localhost:8080",
+    "host": "localhost:7078",
     "basePath": "/",
     "tags": [
         {
             "name": "feedback-type-controller",
             "description": "Feedback Type Controller"
-        },
-        {
-            "name": "clinical-decision-support-controller",
-            "description": "Clinical Decision Support Controller"
         },
         {
             "name": "call-qa-mapping-controller",
@@ -30,6 +26,10 @@
         {
             "name": "prescription-controller",
             "description": "Prescription Controller"
+        },
+        {
+            "name": "service-improvement-officer-controller",
+            "description": "Service Improvement Officer Controller"
         },
         {
             "name": "epidemic-outbreak-controller",
@@ -96,6 +96,10 @@
             "description": "Blood Component Controller"
         },
         {
+            "name": "clinical-decision-support-controller",
+            "description": "Clinical Decision Support Controller"
+        },
+        {
             "name": "beneficiary-call-controller",
             "description": "Beneficiary Call Controller"
         },
@@ -110,10 +114,6 @@
         {
             "name": "location-controller",
             "description": "Location Controller"
-        },
-        {
-            "name": "service-improvement-officer-controller",
-            "description": "Service Improvement Officer Controller"
         },
         {
             "name": "disease-controller",
@@ -136,7 +136,7 @@
         "/CDSS/Symptoms": {
             "post": {
                 "tags": [
-                    "clinical-decision-support-system-controller"
+                    "clinical-decision-support-controller"
                 ],
                 "summary": "Get symptoms",
                 "operationId": "getSymptomsPostUsingPOST",
@@ -188,7 +188,7 @@
         "/CDSS/getQuestions": {
             "post": {
                 "tags": [
-                    "clinical-decision-support-system-controller"
+                    "clinical-decision-support-controller"
                 ],
                 "summary": "Get questions by symptom, age and gender",
                 "operationId": "getQuestionUsingPOST",
@@ -240,7 +240,7 @@
         "/CDSS/getResult": {
             "post": {
                 "tags": [
-                    "clinical-decision-support-system-controller"
+                    "clinical-decision-support-controller"
                 ],
                 "summary": "Get result based on compliant id",
                 "operationId": "getResultUsingPOST",
@@ -292,7 +292,7 @@
         "/CDSS/saveSymptom": {
             "post": {
                 "tags": [
-                    "clinical-decision-support-system-controller"
+                    "clinical-decision-support-controller"
                 ],
                 "summary": "Save symptom",
                 "operationId": "saveSymptomUsingPOST",
@@ -1853,7 +1853,7 @@
         "/beneficiary/getSioHistory": {
             "post": {
                 "tags": [
-                    "service-improvement-officer-history-controller"
+                    "service-improvement-officer-controller"
                 ],
                 "summary": "Get sio history",
                 "operationId": "getSioHistoryUsingPOST",
