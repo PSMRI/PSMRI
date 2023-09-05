@@ -10,10 +10,13 @@
             "email": "amrit@piramalswasthya.org"
         }
     },
-    "host": "localhost:7078",
+    "host": "localhost:8080",
     "basePath": "/",
     "tags": [
-        
+        {
+            "name": "basic-error-controller",
+            "description": "Basic Error Controller"
+        },
         {
             "name": "beneficiary-registration-controller",
             "description": "Beneficiary Registration Controller"
@@ -115,8 +118,12 @@
             "description": "Lonic Controller"
         },
         {
-            "name": "national-health-mission-controller",
-            "description": "National Health Mission Controller"
+            "name": "lung-assessment-controller",
+            "description": "Lung Assessment Controller"
+        },
+        {
+            "name": "national-health-mission-dashboard-controller",
+            "description": "National Health Mission Dashboard Controller"
         },
         {
             "name": "notification-controller",
@@ -149,10 +156,6 @@
         {
             "name": "snomed-controller",
             "description": "Snomed Controller"
-        },
-        {
-            "name": "swaasa-controller",
-            "description": "Swaasa Controller"
         },
         {
             "name": "up-technical-support-controller",
@@ -2827,7 +2830,7 @@
         "/crmReports/getAllByAgeGroup": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get caller by age group",
                 "operationId": "getAllByAgeGroupUsingPOST",
@@ -2879,7 +2882,7 @@
         "/crmReports/getAllByGender": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get all by gender",
                 "operationId": "getAllByGenderUsingPOST",
@@ -2931,7 +2934,7 @@
         "/crmReports/getAllBySexualOrientation": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get all by sexual orientation",
                 "operationId": "getAllBySexualOrientationUsingPOST",
@@ -2983,7 +2986,7 @@
         "/crmReports/getAllReportsByDate": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get all reports by date",
                 "operationId": "getAllReportsByDateUsingPOST",
@@ -3035,7 +3038,7 @@
         "/crmReports/getCallQualityReport": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get call quality report",
                 "operationId": "getCallQualityReportUsingPOST",
@@ -3087,7 +3090,7 @@
         "/crmReports/getCallSummaryReport": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get call summary report",
                 "operationId": "getCallSummaryReportUsingPOST",
@@ -3139,7 +3142,7 @@
         "/crmReports/getComplaintDetailReport": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get complaint detail report",
                 "operationId": "getComplaintDetailReportUsingPOST",
@@ -3191,7 +3194,7 @@
         "/crmReports/getCountsByPreferredLanguage": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get counts by preferred language",
                 "operationId": "getCountsByPreferredLanguageUsingPOST",
@@ -3243,7 +3246,7 @@
         "/crmReports/getDistrictWiseCallReport": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get district wise call report",
                 "operationId": "getDistrictWiseCallReportUsingPOST",
@@ -3295,7 +3298,7 @@
         "/crmReports/getQualityReport": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get quality report",
                 "operationId": "getQualityReportUsingPOST",
@@ -3347,7 +3350,7 @@
         "/crmReports/getReportTypes/{providerServiceMapID}": {
             "get": {
                 "tags": [
-                    "customer-relationship-management-reports"
+                    "customer-relationship-reports"
                 ],
                 "summary": "QA report type master data",
                 "operationId": "patientAppChiefComplaintsMasterDataUsingGET",
@@ -3386,7 +3389,7 @@
         "/crmReports/getUnblockedUserReport": {
             "post": {
                 "tags": [
-                    "customer-relationship-management-secondary-reports"
+                    "customer-relationship-secondary-reports"
                 ],
                 "summary": "Get unblocked user report",
                 "operationId": "getUnblockedUserReportUsingPOST",
@@ -5037,21 +5040,18 @@
         "/error": {
             "get": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
-                "summary": "error",
-                "operationId": "errorUsingGET",
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingGET",
                 "produces": [
-                    "*/*"
+                    "text/html"
                 ],
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "object"
-                            }
+                            "$ref": "#/definitions/ModelAndView"
                         }
                     },
                     "401": {
@@ -5067,24 +5067,21 @@
             },
             "head": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
-                "summary": "error",
-                "operationId": "errorUsingHEAD",
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingHEAD",
                 "consumes": [
                     "application/json"
                 ],
                 "produces": [
-                    "*/*"
+                    "text/html"
                 ],
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "object"
-                            }
+                            "$ref": "#/definitions/ModelAndView"
                         }
                     },
                     "204": {
@@ -5100,24 +5097,21 @@
             },
             "post": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
-                "summary": "error",
-                "operationId": "errorUsingPOST",
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingPOST",
                 "consumes": [
                     "application/json"
                 ],
                 "produces": [
-                    "*/*"
+                    "text/html"
                 ],
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "object"
-                            }
+                            "$ref": "#/definitions/ModelAndView"
                         }
                     },
                     "201": {
@@ -5136,24 +5130,21 @@
             },
             "put": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
-                "summary": "error",
-                "operationId": "errorUsingPUT",
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingPUT",
                 "consumes": [
                     "application/json"
                 ],
                 "produces": [
-                    "*/*"
+                    "text/html"
                 ],
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "object"
-                            }
+                            "$ref": "#/definitions/ModelAndView"
                         }
                     },
                     "201": {
@@ -5172,21 +5163,18 @@
             },
             "delete": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
-                "summary": "error",
-                "operationId": "errorUsingDELETE",
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingDELETE",
                 "produces": [
-                    "*/*"
+                    "text/html"
                 ],
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "object"
-                            }
+                            "$ref": "#/definitions/ModelAndView"
                         }
                     },
                     "204": {
@@ -5202,24 +5190,21 @@
             },
             "options": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
-                "summary": "error",
-                "operationId": "errorUsingOPTIONS",
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingOPTIONS",
                 "consumes": [
                     "application/json"
                 ],
                 "produces": [
-                    "*/*"
+                    "text/html"
                 ],
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "object"
-                            }
+                            "$ref": "#/definitions/ModelAndView"
                         }
                     },
                     "204": {
@@ -5235,24 +5220,21 @@
             },
             "patch": {
                 "tags": [
-                    
+                    "basic-error-controller"
                 ],
-                "summary": "error",
-                "operationId": "errorUsingPATCH",
+                "summary": "errorHtml",
+                "operationId": "errorHtmlUsingPATCH",
                 "consumes": [
                     "application/json"
                 ],
                 "produces": [
-                    "*/*"
+                    "text/html"
                 ],
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "object"
-                            }
+                            "$ref": "#/definitions/ModelAndView"
                         }
                     },
                     "204": {
@@ -8307,7 +8289,7 @@
                 "tags": [
                     "national-health-mission-dashboard-controller"
                 ],
-                "summary": "Push abandoned calls from czentrix",
+                "summary": "Push abandoned calls from call centre",
                 "operationId": "pushAbandonCallsFromC_ZentrixUsingPOST",
                 "consumes": [
                     "application/json"
@@ -10445,7 +10427,7 @@
         "/swaasa/getAssesment/{assessmentId}": {
             "get": {
                 "tags": [
-                    "swaasa-controller"
+                    "lung-assessment-controller"
                 ],
                 "summary": "Get assesment",
                 "operationId": "getAssessmentUsingGET",
@@ -10489,7 +10471,7 @@
         "/swaasa/getAssesmentDetails/{patientId}": {
             "get": {
                 "tags": [
-                    "swaasa-controller"
+                    "lung-assessment-controller"
                 ],
                 "summary": "Get assesment details",
                 "operationId": "getAssessmentDetailsUsingGET",
@@ -10534,7 +10516,7 @@
         "/swaasa/startAssesment": {
             "post": {
                 "tags": [
-                    "swaasa-controller"
+                    "lung-assessment-controller"
                 ],
                 "summary": "Start assesment",
                 "operationId": "startAssesmentUsingPOST",
@@ -11640,52 +11622,6 @@
                 }
             }
         },
-        "/user/userAuthenticateV1": {
-            "post": {
-                "tags": [
-                    "iemr-admin-controller"
-                ],
-                "summary": "User authentication V1",
-                "operationId": "userAuthenticateV1UsingPOST",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "loginRequest",
-                        "description": "\"{\\\"userName\\\":\\\"String\\\",\\\"password\\\":\\\"String\\\"}\"",
-                        "required": false,
-                        "schema": {
-                            "$ref": "#/definitions/LoginRequestModel"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    "201": {
-                        "description": "Created"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    },
-                    "403": {
-                        "description": "Forbidden"
-                    },
-                    "404": {
-                        "description": "Not Found"
-                    }
-                }
-            }
-        },
         "/user/userForceLogout": {
             "post": {
                 "tags": [
@@ -11881,8 +11817,7 @@
                     "type": "boolean"
                 },
                 "didNumber": {
-                    "type": "integer",
-                    "format": "int32"
+                    "type": "integer"
                 },
                 "id": {
                     "type": "integer",
