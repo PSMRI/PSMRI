@@ -10,7 +10,7 @@
             "email": "amrit@piramalswasthya.org"
         }
     },
-    "host": "localhost:7078",
+    "host": "localhost:8080",
     "basePath": "/",
     "tags": [
         {
@@ -1343,7 +1343,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "searchBeneficiaryByBlockIdAndLastModDate",
+                "summary": "Search beneficiary by blockId and last modified date",
                 "operationId": "searchBeneficiaryByBlockIdAndLastModDateUsingPOST",
                 "consumes": [
                     "application/json"

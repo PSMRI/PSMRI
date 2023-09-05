@@ -12,7 +12,7 @@
         },
         "license": {}
     },
-    "host": "localhost:7078",
+    "host": "localhost:8080",
     "basePath": "/",
     "tags": [
         {
