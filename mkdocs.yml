@@ -21,13 +21,6 @@ nav:
         - Overview : developer-guides/technical-overview.md
         - Core Technologies : developer-guides/core-technologies.md
         - Release Strategy : developer-guides/release-strategy.md
-    - Community :
-        - Overview : community/community-overview.md
-        - Contributing : community/contributing.md
-        - Roadmap : community/roadmap.md 
-    - About : 
-        - Release Notes : about/release-notes.md
-        - License : about/license.md
     - API-Reference :
         - Admin : api-reference/admin-api-spec.md
         - BeneficiaryId : api-reference/beneficiaryid-generation-api-specs.md
@@ -43,6 +36,14 @@ nav:
         - MMU : api-reference/mmu-api-spec.md
         - Scheduler : api-reference/scheduler-api-spec.md
         - TM : api-reference/tm-api-spec.md
+    - Community :
+        - Overview : community/community-overview.md
+        - Contributing : community/contributing.md
+        - Roadmap : community/roadmap.md 
+    - About : 
+        - Release Notes : about/release-notes.md
+        - License : about/license.md
+    
 extra_css:
     - css/extra.css
 
