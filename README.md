@@ -42,6 +42,16 @@ Open up http://127.0.0.1:8000/ in your browser, and you'll see the default home 
 
 # **Publish AMRIT website to GitHub pages**  
 
+- Raise a merge request from develop branch to main branch.
+
+- The workflow file publish-site.yml gets triggered once the merge is done.  
+
+- The publishing status can be viewed under Actions tab 
+
+  
+
+  
+
 
 
 
