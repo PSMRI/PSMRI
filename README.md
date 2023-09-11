@@ -9,42 +9,54 @@ This repository maintains the documentation framework for AMRIT project. Built u
 ### [MkDocs](https://www.mkdocs.org/)
 MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
 
-Make sure the necessary pre-requisites like Python, MkDocs are installed to make any changes locally.MkDocs can be installed with the following command:  
+This project uses Python. Please ensure that you have Python and pip installed. To install the Python packages listed in a `requirements.txt` file using pip, you can use the following command in your command prompt or terminal:
 
-- **pip install mkdocs**    
+```
+pip install -r requirements.txt
+```
+
+Alternatively, MkDocs can be installed with the following command:
+
+```
+pip install mkdocs
+```
 	  
 Additionally swagger-ui-tag plug-in and material theme can be installed using the following commands:	
 
-- **pip install mkdocs-swagger-ui-tag**    
-- **pip install mkdocs-material**    
+```
+pip install mkdocs-swagger-ui-tag
+pip install mkdocs-material
+```
 	  
-MkDocs comes with a built-in development server that lets you preview your documentation as you work on it. Make sure you're in the same directory as the mkdocs.yml configuration file, and then start the server by running the mkdocs serve command. 
+MkDocs comes with a built-in development server that lets you preview your documentation as you work on it. Make sure you're in the same directory as the mkdocs.yml configuration file, and then start the server by running the mkdocs serve command.
 
-- **mkdocs serve**
+```
+mkdocs serve
+```
   
-Open up http://127.0.0.1:8000/ in your browser, and you'll see the default home page being displayed.    
+Open up http://127.0.0.1:8000/ in your browser, and you'll see the documentation home page being displayed.
 
-# **Modify the documentation**  
+# **Modify the documentation**
 
 - Clone this GitHub repository for which the content needs to be updated.    
   
-- Run the code locally and load http://localhost:8080/v2/api-docs where 8080 is the default port and v2 is the version of the Swagger specification being used.  
+- If you wish to update the API spec of a service, run the Spring code locally (`mvn spring-boot:run`) and load http://localhost:8080/v2/api-docs where 8080 is the default port and v2 is the version of the Swagger specification being used.  
     
-- Copy the page content and save as {module-name}-api-spec.json. 
+- Copy the page content and save as `{module-name}-api-spec.json`. 
 
-- Checkout the PSMRI module code from github and save the above json file under docs/api-specs/ folder.  
+- Checkout the PSMRI module code from GitHub and save the above json file under `docs/api-specs/` folder.  
    
-- Add swagger-ui tag in corresponding markdown file under docs/api-reference folder to include Swagger UI.  
+- Add `swagger-ui` tag in corresponding markdown file under `docs/api-reference` folder to include Swagger UI.  
    
-- The markdown file path is mentioned in mkdocs.yml file under API-Reference navigation.    
+- The markdown file path is mentioned in `mkdocs.yml` file under API-Reference navigation.    
 
 - Execute mkdocs serve and load http://127.0.0.1:8000/ to view the updated content. 
 
 # **Publish AMRIT website to GitHub pages**  
 
-- Raise a merge request from develop branch to main branch.
+- Raise a merge request from `develop` branch to `main` branch.
 
-- The workflow file publish-site.yml gets triggered once the merge is done.  
+- The workflow file `publish-site.yml` gets triggered once the merge is done.  
 
 - The publishing status can be viewed under Actions tab 
 
