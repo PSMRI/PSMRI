@@ -12,7 +12,7 @@
         },
         "license": {}
     },
-    "host": "localhost:7078",
+    "host": "localhost:8080",
     "basePath": "/",
     "tags": [
         {
@@ -44,12 +44,16 @@
             "description": "Start Sync Activity"
         },
         {
+            "name": "location-controller-wo",
+            "description": "Location Controller Wo"
+        },
+        {
             "name": "ncd-care-controller",
             "description": "NCD Care Controller"
         },
         {
-            "name": "childhood-and-adolescence-controller",
-            "description": "Childhood And Adolescence Controller"
+            "name": "foetal-monitor-controller",
+            "description": "Foetal Monitor Controller"
         },
         {
             "name": "family-planning-controller",
@@ -82,10 +86,6 @@
         {
             "name": "antenatal-care-controller",
             "description": "Antenatal Care Controller"
-        },
-        {
-            "name": "fetosense-controller",
-            "description": "Fetosense Controller"
         },
         {
             "name": "neonatal-controller",
@@ -122,6 +122,14 @@
         {
             "name": "ncd-screening-controller",
             "description": "NCD Screening Controller"
+        },
+        {
+            "name": "childhood-adolescence-controller",
+            "description": "Childhood Adolescence Controller"
+        },
+        {
+            "name": "diabetes-hypertension-screening-controller",
+            "description": "Diabetes Hypertension Screening Controller"
         },
         {
             "name": "quickblox-controller",
@@ -4173,7 +4181,7 @@
         "/child-adolescent-care/getBenCaseRecordFromDoctor": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Get child adolescent care beneficiary details entered by doctor",
                 "operationId": "getBenCaseRecordFromDoctorUsingPOST",
@@ -4226,7 +4234,7 @@
         "/child-adolescent-care/getBenHistoryDetails": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Get child adolescent care beneficiary history",
                 "operationId": "getBenHistoryDetailsUsingPOST",
@@ -4279,7 +4287,7 @@
         "/child-adolescent-care/getBenImmunizationServiceDetails": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Get child adolescent care beneficiary immunization details",
                 "operationId": "getBenImmunizationServiceDetailsUsingPOST",
@@ -4332,7 +4340,7 @@
         "/child-adolescent-care/getBenVisitDetailsFrmNurseCAC": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Get beneficiary visit details from nurse for child adolescent care",
                 "operationId": "getBenVisitDetailsFrmNurseCACUsingPOST",
@@ -4385,7 +4393,7 @@
         "/child-adolescent-care/getBenVitalDetailsFrmNurse": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Get child adolescent care beneficiary vitals from nurse",
                 "operationId": "getBenVitalDetailsFrmNurseUsingPOST",
@@ -4438,7 +4446,7 @@
         "/child-adolescent-care/save/doctorData": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Save child adolescent care doctor data",
                 "operationId": "saveDoctorDataCACUsingPOST",
@@ -4492,7 +4500,7 @@
         "/child-adolescent-care/save/nurseData": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Save child adolescent care (CAC) nurse data",
                 "operationId": "saveBenNurseDataCACUsingPOST",
@@ -4546,7 +4554,7 @@
         "/child-adolescent-care/update/BirthAndImmunizationHistoryScreen": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Update birth and immunization history",
                 "operationId": "updateBirthAndImmunizationHistoryNurseUsingPOST",
@@ -4599,7 +4607,7 @@
         "/child-adolescent-care/update/ImmunizationServicesScreen": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Update immunization service data",
                 "operationId": "updateImmunizationServicesNurseUsingPOST",
@@ -4652,7 +4660,7 @@
         "/child-adolescent-care/update/doctorData": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Update child adolescent care doctor data",
                 "operationId": "updateCACDoctorDataUsingPOST",
@@ -4706,7 +4714,7 @@
         "/child-adolescent-care/update/vitalScreen": {
             "post": {
                 "tags": [
-                    "childhood-and-adolescence-controller"
+                    "childhood-adolescence-controller"
                 ],
                 "summary": "Update child adolescent care beneficiary vitals",
                 "operationId": "updateVitalNurseCACUsingPOST",
@@ -7854,13 +7862,13 @@
                 }
             }
         },
-        "/fetosense/fetch/fetosenseDetails/{benFlowID}": {
+        "/foetalMonitor/fetch/foetalMonitorDetails/{benFlowID}": {
             "get": {
                 "tags": [
-                    "fetosense-controller"
+                    "foetal-monitor-controller"
                 ],
-                "summary": "Get the fetosense details",
-                "operationId": "getFetosenseDetailsUsingGET",
+                "summary": "Get the foetal monitor details",
+                "operationId": "getFoetalMonitorDetailsUsingGET",
                 "consumes": [
                     "application/json"
                 ],
@@ -7902,13 +7910,13 @@
                 }
             }
         },
-        "/fetosense/fetch/reportGraphBase64": {
+        "/foetalMonitor/fetch/reportGraphBase64": {
             "post": {
                 "tags": [
-                    "fetosense-controller"
+                    "foetal-monitor-controller"
                 ],
-                "summary": "Fetch fetosense pdf report (Base64 format)",
-                "operationId": "getFetosenseDetailsUsingPOST",
+                "summary": "Fetch foetal monitor pdf report (Base64 format)",
+                "operationId": "getFoetalMonitorDetailsUsingPOST",
                 "consumes": [
                     "application/json"
                 ],
@@ -7918,11 +7926,11 @@
                 "parameters": [
                     {
                         "in": "body",
-                        "name": "fetosenseOBJ",
+                        "name": "foetalMonitorOBJ",
                         "description": "{\"reportFilePath\":\"String\"}",
                         "required": false,
                         "schema": {
-                            "$ref": "#/definitions/Fetosense"
+                            "$ref": "#/definitions/FoetalMonitor"
                         }
                     },
                     {
@@ -7954,12 +7962,12 @@
                 }
             }
         },
-        "/fetosense/registerMother": {
+        "/foetalMonitor/registerMother": {
             "post": {
                 "tags": [
-                    "fetosense-controller"
+                    "foetal-monitor-controller"
                 ],
-                "summary": "Fetosense device status check",
+                "summary": "Foetal monitor device status check",
                 "operationId": "saveMotherUsingPOST",
                 "consumes": [
                     "application/json"
@@ -8007,13 +8015,13 @@
                 }
             }
         },
-        "/fetosense/sendMotherTestDetailsToFetosense": {
+        "/foetalMonitor/sendMotherTestDetailsToFoetalMonitor": {
             "post": {
                 "tags": [
-                    "fetosense-controller"
+                    "foetal-monitor-controller"
                 ],
-                "summary": "Send the mother data and prescribed test details to fetosense",
-                "operationId": "sendANCMotherTestDetailsToFetosenseUsingPOST",
+                "summary": "Send the mother data and prescribed test details to foetal monitor",
+                "operationId": "sendANCMotherTestDetailsToFoetalMonitorUsingPOST",
                 "consumes": [
                     "application/json"
                 ],
@@ -8060,13 +8068,13 @@
                 }
             }
         },
-        "/fetosense/update/fetosenseData": {
+        "/foetalMonitor/update/foetalMonitorData": {
             "post": {
                 "tags": [
-                    "fetosense-controller"
+                    "foetal-monitor-controller"
                 ],
-                "summary": "Update fetosense data",
-                "operationId": "updateFetosenseDataUsingPOST",
+                "summary": "Update foetal monitor data",
+                "operationId": "updateFoetalMonitorDataUsingPOST",
                 "consumes": [
                     "application/json"
                 ],
@@ -9432,6 +9440,55 @@
                     "*/*"
                 ],
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/location/get/villageFromDistrictID/{districtID}": {
+            "get": {
+                "tags": [
+                    "location-controller"
+                ],
+                "summary": "Get village from district id",
+                "operationId": "getVillageByDistrictIDUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "districtID",
+                        "in": "path",
+                        "description": "districtID",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
                     {
                         "name": "Authorization",
                         "in": "header",
@@ -12435,7 +12492,7 @@
         "/screeningOutcome/diabetes": {
             "post": {
                 "tags": [
-                    "diabetes-and-hypertension-screening-controller"
+                    "diabetes-hypertension-screening-controller"
                 ],
                 "summary": "Evaluate diabetes screening outcome",
                 "operationId": "getDiabetesOutcomeUsingPOST",
@@ -12488,7 +12545,7 @@
         "/screeningOutcome/hypertension": {
             "post": {
                 "tags": [
-                    "diabetes-and-hypertension-screening-controller"
+                    "diabetes-hypertension-screening-controller"
                 ],
                 "summary": "Evaluate hypertension screening outcome",
                 "operationId": "getHypertensionOutcomeUsingPOST",
@@ -13668,6 +13725,267 @@
                     }
                 }
             }
+        },
+        "/wo/location/get/LocationMaster/{villageID}/wo": {
+            "get": {
+                "tags": [
+                    "location-controller-wo"
+                ],
+                "summary": "Get village master from village id",
+                "operationId": "getLocationMasterUsingGET_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "villageID",
+                        "in": "path",
+                        "description": "villageID",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/wo/location/get/districtBlockMaster/{districtID}/wo": {
+            "get": {
+                "tags": [
+                    "location-controller-wo"
+                ],
+                "summary": "Get block master from district id",
+                "operationId": "getDistrictBlockMasterUsingGET_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "districtID",
+                        "in": "path",
+                        "description": "districtID",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/wo/location/get/districtMaster/{stateID}/wo": {
+            "get": {
+                "tags": [
+                    "location-controller-wo"
+                ],
+                "summary": "Get district master from state id",
+                "operationId": "getDistrictMasterUsingGET_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "stateID",
+                        "in": "path",
+                        "description": "stateID",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/wo/location/get/villageFromDistrictID/{districtID}/wo": {
+            "get": {
+                "tags": [
+                    "location-controller-wo"
+                ],
+                "summary": "Get village from district id",
+                "operationId": "getVillageByDistrictIDUsingGET_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "districtID",
+                        "in": "path",
+                        "description": "districtID",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/wo/location/get/villageMasterFromBlockID/{blockID}/wo": {
+            "get": {
+                "tags": [
+                    "location-controller-wo"
+                ],
+                "summary": "Get village master from block id",
+                "operationId": "getVillageMasterUsingGET_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "blockID",
+                        "in": "path",
+                        "description": "blockID",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/wo/location/getLocDetailsBasedOnSpIDAndPsmID/wo": {
+            "post": {
+                "tags": [
+                    "location-controller-wo"
+                ],
+                "summary": "Get location details from service point id and provider service map id",
+                "operationId": "getLocDetailsBasedOnSpIDAndPsmIDNewUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "comingRequest",
+                        "description": "comingRequest",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -13738,70 +14056,7 @@
                 }
             }
         },
-        "PastObstetricHostoryHRP": {
-            "type": "object",
-            "properties": {
-                "complicationDuringPregnancy": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/ComplicationDuringPregnancyHRP"
-                    }
-                },
-                "congenitalAnomalies": {
-                    "type": "string"
-                },
-                "deliveryComplication": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/DeliveryComplicationHRP"
-                    }
-                },
-                "durationOfPregnancy": {
-                    "$ref": "#/definitions/DurationOfPregnancyHRP"
-                },
-                "typeOfDelivery": {
-                    "$ref": "#/definitions/TypeOfDeliveryHRP"
-                }
-            }
-        },
-        "ReportInput": {
-            "type": "object",
-            "properties": {
-                "fromDate": {
-                    "type": "string",
-                    "format": "date"
-                },
-                "parkingPlaceID": {
-                    "type": "integer",
-                    "format": "int32"
-                },
-                "providerServiceMapID": {
-                    "type": "integer",
-                    "format": "int32"
-                },
-                "toDate": {
-                    "type": "string",
-                    "format": "date"
-                },
-                "userID": {
-                    "type": "integer",
-                    "format": "int32"
-                },
-                "vanID": {
-                    "type": "integer",
-                    "format": "int32"
-                }
-            }
-        },
-        "DurationOfPregnancyHRP": {
-            "type": "object",
-            "properties": {
-                "durationType": {
-                    "type": "string"
-                }
-            }
-        },
-        "Fetosense": {
+        "FoetalMonitor": {
             "type": "object",
             "properties": {
                 "aMRITFilePath": {
@@ -13866,17 +14121,17 @@
                 "deviceId": {
                     "type": "string"
                 },
-                "fetosenseID": {
+                "foetalMonitorID": {
                     "type": "integer",
                     "format": "int64"
                 },
-                "fetosenseMotherID": {
+                "foetalMonitorMotherID": {
                     "type": "string"
                 },
-                "fetosensePartnerID": {
+                "foetalMonitorPartnerID": {
                     "type": "string"
                 },
-                "fetosenseTestId": {
+                "foetalMonitorTestId": {
                     "type": "integer",
                     "format": "int64"
                 },
@@ -13916,7 +14171,7 @@
                 "movementEntriesDB": {
                     "type": "string"
                 },
-                "partnerFetosenseId": {
+                "partnerFoetalMonitorId": {
                     "type": "integer",
                     "format": "int64"
                 },
@@ -13965,6 +14220,69 @@
                 "visitCode": {
                     "type": "integer",
                     "format": "int64"
+                }
+            }
+        },
+        "PastObstetricHostoryHRP": {
+            "type": "object",
+            "properties": {
+                "complicationDuringPregnancy": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ComplicationDuringPregnancyHRP"
+                    }
+                },
+                "congenitalAnomalies": {
+                    "type": "string"
+                },
+                "deliveryComplication": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DeliveryComplicationHRP"
+                    }
+                },
+                "durationOfPregnancy": {
+                    "$ref": "#/definitions/DurationOfPregnancyHRP"
+                },
+                "typeOfDelivery": {
+                    "$ref": "#/definitions/TypeOfDeliveryHRP"
+                }
+            }
+        },
+        "ReportInput": {
+            "type": "object",
+            "properties": {
+                "fromDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "parkingPlaceID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "providerServiceMapID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "toDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "userID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "vanID": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "DurationOfPregnancyHRP": {
+            "type": "object",
+            "properties": {
+                "durationType": {
+                    "type": "string"
                 }
             }
         },
