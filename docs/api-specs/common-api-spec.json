@@ -122,8 +122,8 @@
             "description": "Lung Assessment Controller"
         },
         {
-            "name": "national-health-mission-dashboard-controller",
-            "description": "National Health Mission Dashboard Controller"
+            "name": "national-health-mission-controller",
+            "description": "National Health Mission Controller"
         },
         {
             "name": "notification-controller",

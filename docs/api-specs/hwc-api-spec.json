@@ -20,6 +20,10 @@
             "description": "CRM Report Controller"
         },
         {
+            "name": "diabetes-and-hypertension-controller",
+            "description": "Diabetes And Hypertension Controller"
+        },
+        {
             "name": "worklist-controller",
             "description": "Worklist Controller"
         },

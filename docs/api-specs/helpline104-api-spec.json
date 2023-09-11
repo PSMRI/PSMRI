@@ -20,6 +20,10 @@
             "description": "Feedback Type Controller"
         },
         {
+            "name": "clinical-decision-support-controller",
+            "description": "Clinical Decision Support Controller"
+        },
+        {
             "name": "call-qa-mapping-controller",
             "description": "Call QA Mapping Controller"
         },
@@ -114,6 +118,10 @@
         {
             "name": "location-controller",
             "description": "Location Controller"
+        },
+        {
+            "name": "service-improvement-officer-controller",
+            "description": "Service Improvement Officer Controller"
         },
         {
             "name": "disease-controller",
