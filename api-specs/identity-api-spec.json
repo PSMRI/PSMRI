@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "A microservice for the creation and management of beneficaries.",
+        "description": "A microservice for the creation and management of beneficiaries.",
         "version": "1.0",
         "title": "Identity API",
         "contact": {
@@ -10,7 +10,7 @@
             "email": "amrit@piramalswasthya.org"
         }
     },
-    "host": "localhost:7078",
+    "host": "localhost:8080",
     "basePath": "/",
     "tags": [
         {
@@ -27,7 +27,7 @@
         },
         {
             "name": "rmnch-mobile-app-controller",
-            "description": "Rmnch Mobile App Controller"
+            "description": "RMNCH Mobile App Controller"
         },
         {
             "name": "version-controller",
@@ -252,7 +252,7 @@
                 "tags": [
                     "family-tagging-controller"
                 ],
-                "summary": "Create and Modify family tagging",
+                "summary": "Create and modify family tagging",
                 "operationId": "saveFamilyTaggingUsingPOST",
                 "consumes": [
                     "application/json"
@@ -299,7 +299,7 @@
                 "tags": [
                     "family-tagging-controller"
                 ],
-                "summary": "Create Family",
+                "summary": "Create family",
                 "operationId": "createFamilyUsingPOST",
                 "consumes": [
                     "application/json"
@@ -346,7 +346,7 @@
                 "tags": [
                     "family-tagging-controller"
                 ],
-                "summary": "edit beneficiary family details",
+                "summary": "Edit beneficiary family details",
                 "operationId": "editFamilyDetailsUsingPOST",
                 "consumes": [
                     "application/json"
@@ -440,7 +440,7 @@
                 "tags": [
                     "family-tagging-controller"
                 ],
-                "summary": "Search Family",
+                "summary": "Search family",
                 "operationId": "searchFamilyUsingPOST",
                 "consumes": [
                     "application/json"
@@ -534,7 +534,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "getBeneficiaries",
+                "summary": "Get beneficiaries by advance search",
                 "operationId": "getBeneficiariesUsingPOST",
                 "consumes": [
                     "application/json"
@@ -586,7 +586,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "getBeneficiaryImageByBenRegID",
+                "summary": "Get beneficiary image by beneficiary registration id",
                 "operationId": "getBeneficiaryImageByBenRegIDUsingPOST",
                 "consumes": [
                     "application/json"
@@ -638,7 +638,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "Check available BENID in local",
+                "summary": "Check available beneficary id in local server",
                 "operationId": "checkAvailablBenIDLocalServerUsingGET",
                 "produces": [
                     "*/*",
@@ -676,7 +676,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "createIdentity",
+                "summary": "Create identity by agent",
                 "operationId": "createIdentityUsingPOST",
                 "consumes": [
                     "application/json"
@@ -728,7 +728,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "editIdentity",
+                "summary": "Edit identity by agent",
                 "operationId": "editIdentityUsingPOST",
                 "consumes": [
                     "application/json"
@@ -780,7 +780,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "editIdentityEducationOrCommunity",
+                "summary": "Edit education or community by agent",
                 "operationId": "editIdentityEducationOrCommunityUsingPOST",
                 "consumes": [
                     "application/json"
@@ -832,7 +832,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "getFiniteBeneficiaries",
+                "summary": "Get finite beneficiaries",
                 "operationId": "getFiniteBeneficiariesUsingPOST",
                 "consumes": [
                     "application/json"
@@ -884,7 +884,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "searhBeneficiaryByABHAAddress",
+                "summary": "Search beneficiary based on health ID / ABHA Address",
                 "operationId": "searhBeneficiaryByABHAAddressUsingPOST",
                 "consumes": [
                     "application/json"
@@ -934,7 +934,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "searhBeneficiaryByABHAIdNo",
+                "summary": "Search beneficiary based on health ID number / ABHA ID number",
                 "operationId": "searhBeneficiaryByABHAIdNoUsingPOST",
                 "consumes": [
                     "application/json"
@@ -984,7 +984,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "getBeneficiariesByBeneficiaryId",
+                "summary": "Search identity based on beneficiary registration id",
                 "operationId": "getBeneficiariesByBeneficiaryIdUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1034,7 +1034,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "getBeneficiariesByBeneficiaryRegId",
+                "summary": "Search beneficiary based on beneficiary registration id",
                 "operationId": "getBeneficiariesByBeneficiaryRegIdUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1084,7 +1084,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "getBeneficiariesByBenRegIds",
+                "summary": "Get beneficiaries by beneficiary registration id",
                 "operationId": "getBeneficiariesByBenRegIdsUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1136,7 +1136,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "getPartialBeneficiariesByBenRegIds",
+                "summary": "Get beneficiaries partial details by beneficiary registration id list",
                 "operationId": "getPartialBeneficiariesByBenRegIdsUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1188,7 +1188,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "getBeneficiariesByPhoneNum",
+                "summary": "Search beneficiary based on phone number",
                 "operationId": "getBeneficiariesByPhoneNumUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1238,7 +1238,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "reserveIdentity",
+                "summary": "Reserve identity by agent",
                 "operationId": "reserveIdentityUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1290,7 +1290,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "Save Server generated BeneficiaryID & BenRegID to local server",
+                "summary": "Save server generated beneficiary ID & beneficiary registration ID to local server",
                 "operationId": "saveGeneratedBenIDToLocalServerUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1338,12 +1338,58 @@
                 }
             }
         },
+        "/id/searchByDistrictId": {
+            "post": {
+                "tags": [
+                    "identity-controller"
+                ],
+                "summary": "Search beneficiary by blockId and last modified date",
+                "operationId": "searchBeneficiaryByBlockIdAndLastModDateUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "object",
+                        "description": "\"String\"",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
         "/id/searchByFamilyId": {
             "post": {
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "searhBeneficiaryByFamilyId",
+                "summary": "Search beneficiary based on family id",
                 "operationId": "searhBeneficiaryByFamilyIdUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1393,7 +1439,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "searhBeneficiaryByGovIdentity",
+                "summary": "Search beneficiary based on government identity number",
                 "operationId": "searhBeneficiaryByGovIdentityUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1443,7 +1489,7 @@
                 "tags": [
                     "identity-controller"
                 ],
-                "summary": "unreserveIdentity",
+                "summary": "Unreserve identity by agent",
                 "operationId": "unreserveIdentityUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1549,7 +1595,7 @@
                 "tags": [
                     "rmnch-mobile-app-controller"
                 ],
-                "summary": "get beneficiary data for given village ",
+                "summary": "Get beneficiary data for given village ",
                 "operationId": "getBeneficiaryDataUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1603,7 +1649,7 @@
                 "tags": [
                     "rmnch-mobile-app-controller"
                 ],
-                "summary": "sync data to amrit for already regestered beneficiary with AMRIT beneficiary id ",
+                "summary": "Sync data to AMRIT for already regestered beneficiary with AMRIT beneficiary id ",
                 "operationId": "syncDataToAmritUsingPOST",
                 "consumes": [
                     "application/json"
@@ -1656,10 +1702,11 @@
                 "tags": [
                     "version-controller"
                 ],
-                "summary": "versionInformation",
+                "summary": "Get version information",
                 "operationId": "versionInformationUsingGET",
                 "produces": [
-                    "*/*"
+                    "*/*",
+                    "application/json"
                 ],
                 "responses": {
                     "200": {
