@@ -7,7 +7,7 @@ Patients, HWCs and PHCs are the key stakeholders. AMRIT can be accessible from v
 * Java 8, SpringBoot 1.5.3
 * Angular 4 and 5
 * Wildfly 11 Final
-* MySQL
+* MySQL 5.7
 * Redis (SSO)
 * MongoDB - FHIR Resource
 * OpenKM on Tomcat
@@ -52,7 +52,9 @@ https://blog.devart.com/how-to-restore-mysql-database-from-backup.html
 
 Create database db_identity;
 Create database db_iemr;
-Create database db_reporting;
+Create database db_reporting;  
+
+At the time of MYSQL Installation ,please notedown “root” user password for reference as it will have full privilege.  
 
 ### Run below commands to add users & assign permissions before importing database files
 
