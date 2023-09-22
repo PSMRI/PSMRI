@@ -54,17 +54,14 @@ Create database db_identity;
 Create database db_iemr;
 Create database db_reporting;
 
-### Run below users&permission before importing database files
+### Run below commands to add users & assign permissions before importing database files
 
-CREATE USER 'masteruser'@'%' IDENTIFIED BY 'Piramal@2017';  
-CREATE USER 'masteruser1'@'%' IDENTIFIED BY 'Piramal@2017';  
-CREATE USER 'Piramaldev'@'%' IDENTIFIED BY 'Piramal@2017';  
-GRANT ALL PRIVILEGES ON db_iemr.* TO 'masteruser'@'%';  
-GRANT ALL PRIVILEGES ON db_iemr.* TO 'masteruser1'@'%';  
-GRANT ALL PRIVILEGES ON db_iemr.* TO 'Piramaldev'@'%';  
-GRANT ALL PRIVILEGES ON db_reporting.* TO 'masteruser'@'%';  
-GRANT ALL PRIVILEGES ON db_reporting.* TO 'masteruser1'@'%';  
-GRANT ALL PRIVILEGES ON db_reporting.* TO 'Piramaldev'@'%';  
+CREATE USER 'testuser'@'%' IDENTIFIED BY 'Test@123';  
+GRANT ALL PRIVILEGES ON db_iemr.* TO 'testuser'@'%';  
+GRANT ALL PRIVILEGES ON db_identity.* TO 'testuser'@'%';
+GRANT ALL PRIVILEGES ON db_reporting.* TO 'testuser'@'%';   
+
+The user and password can be changed in each API for running the Spring application.  
 
 ### Importing db_iemr schema from workbench
 
