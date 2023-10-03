@@ -9,9 +9,9 @@
 <link href="../../module-guides/fhir/" rel="prev"/>
 <link href="../core-technologies/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.2, mkdocs-material-9.3.1" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.4.3" name="generator"/>
 <title>Overview - AMRIT</title>
-<link href="../../assets/stylesheets/main.046329b4.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.79e020e9.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -133,9 +133,9 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
 <span class="md-ellipsis">
     Projects Guide
   </span>
@@ -199,9 +199,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-ellipsis">
     Developer Guide
   </span>
@@ -251,6 +251,75 @@
     Technical Architecture
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#amrit-db-restoration">
+    AMRIT DB restoration
+  </a>
+<nav aria-label="AMRIT DB restoration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mysql-installation">
+    MYSQL Installation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#download-mysql-from-the-below-link">
+    Download MySQL from the below link:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#link-for-installation-steps">
+    Link for installation steps:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#db-restoration-sample-stepslink">
+    DB Restoration Sample steps(link):
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#db-restoration-using-workbench">
+    DB Restoration using Workbench:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#db-restoration-using-commands">
+    DB Restoration using Commands:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#required-amrit-schema-and-database-user-creation">
+    Required Amrit Schema and Database User Creation:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-below-commands-to-add-users-assign-permissions-before-importing-database-files">
+    Run below commands to add users &amp; assign permissions before importing database files
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-db_iemr-schema-from-workbench">
+    Importing db_iemr schema from workbench
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-global-master-data-dummy-login-info">
+    Importing global master data &amp; dummy login info
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-db_identity-schema">
+    Importing db_identity schema
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-db_reporting-schema">
+    Importing db_reporting schema
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -271,9 +340,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
 <span class="md-ellipsis">
     API-Reference
   </span>
@@ -386,9 +455,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
 <span class="md-ellipsis">
     Community
   </span>
@@ -424,9 +493,9 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
 <span class="md-ellipsis">
     About
   </span>
@@ -488,6 +557,75 @@
     Technical Architecture
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#amrit-db-restoration">
+    AMRIT DB restoration
+  </a>
+<nav aria-label="AMRIT DB restoration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mysql-installation">
+    MYSQL Installation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#download-mysql-from-the-below-link">
+    Download MySQL from the below link:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#link-for-installation-steps">
+    Link for installation steps:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#db-restoration-sample-stepslink">
+    DB Restoration Sample steps(link):
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#db-restoration-using-workbench">
+    DB Restoration using Workbench:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#db-restoration-using-commands">
+    DB Restoration using Commands:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#required-amrit-schema-and-database-user-creation">
+    Required Amrit Schema and Database User Creation:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-below-commands-to-add-users-assign-permissions-before-importing-database-files">
+    Run below commands to add users &amp; assign permissions before importing database files
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-db_iemr-schema-from-workbench">
+    Importing db_iemr schema from workbench
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-global-master-data-dummy-login-info">
+    Importing global master data &amp; dummy login info
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-db_identity-schema">
+    Importing db_identity schema
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-db_reporting-schema">
+    Importing db_reporting schema
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -504,7 +642,7 @@ Patients, HWCs and PHCs are the key stakeholders. AMRIT can be accessible from v
 <li>Java 8, SpringBoot 1.5.3</li>
 <li>Angular 4 and 5</li>
 <li>Wildfly 11 Final</li>
-<li>MySQL</li>
+<li>MySQL 5.7</li>
 <li>Redis (SSO)</li>
 <li>MongoDB - FHIR Resource</li>
 <li>OpenKM on Tomcat</li>
@@ -514,6 +652,44 @@ Patients, HWCs and PHCs are the key stakeholders. AMRIT can be accessible from v
 </ul>
 <h2 id="technical-architecture">Technical Architecture</h2>
 <p><img alt="amrit-image" src="../img/technical-architecture.png"/></p>
+<h2 id="amrit-db-restoration">AMRIT DB restoration</h2>
+<p>Please find below the zip file of AMRIT blank db with dummy data and global masters.</p>
+<p><a href="../Schema_BKP_19092023.zip">blank_db_zip</a></p>
+<h3 id="mysql-installation">MYSQL Installation</h3>
+<p>MySQL is a relational database management system based on SQL – Structured Query Language. The application is used for a wide range of purposes, including data warehousing, e-commerce, and logging applications. The most common use for MySQL, however is for the purpose of a web database.</p>
+<h3 id="download-mysql-from-the-below-link">Download MySQL from the below link:</h3>
+<p>https://dev.mysql.com/downloads/installer/</p>
+<h3 id="link-for-installation-steps">Link for installation steps:</h3>
+<p>https://software.grok.lsu.edu/Article.aspx?articleid=18737</p>
+<h3 id="db-restoration-sample-stepslink">DB Restoration Sample steps(link):</h3>
+<h3 id="db-restoration-using-workbench">DB Restoration using Workbench:</h3>
+<p>https://www.greengeeks.com/tutorials/restore-a-mysql-database-from-a-backup-with-mysql-workbench/</p>
+<h3 id="db-restoration-using-commands">DB Restoration using Commands:</h3>
+<p>https://blog.devart.com/how-to-restore-mysql-database-from-backup.html</p>
+<h3 id="required-amrit-schema-and-database-user-creation">Required Amrit Schema and Database User Creation:</h3>
+<p><img alt="amrit-image" src="../img/img1.png"/></p>
+<p>Create database db_identity;
+Create database db_iemr;
+Create database db_reporting;  </p>
+<p>At the time of MYSQL Installation ,please notedown “root” user password for reference as it will have full privilege.  </p>
+<h3 id="run-below-commands-to-add-users-assign-permissions-before-importing-database-files">Run below commands to add users &amp; assign permissions before importing database files</h3>
+<p>CREATE USER 'testuser'@'%' IDENTIFIED BY 'Test@123';<br/>
+GRANT ALL PRIVILEGES ON db_iemr.<em> TO 'testuser'@'%';<br/>
+GRANT ALL PRIVILEGES ON db_identity.</em> TO 'testuser'@'%';
+GRANT ALL PRIVILEGES ON db_reporting.* TO 'testuser'@'%';   </p>
+<p>The user and password can be changed in each API for running the Spring application.  </p>
+<h3 id="importing-db_iemr-schema-from-workbench">Importing db_iemr schema from workbench</h3>
+<p><img alt="amrit-image" src="../img/img2.png"/></p>
+<p><img alt="amrit-image" src="../img/img3.png"/></p>
+<h3 id="importing-global-master-data-dummy-login-info">Importing global master data &amp; dummy login info</h3>
+<p><img alt="amrit-image" src="../img/img4.png"/></p>
+<p><img alt="amrit-image" src="../img/img5.png"/></p>
+<h3 id="importing-db_identity-schema">Importing db_identity schema</h3>
+<p><img alt="amrit-image" src="../img/img6.png"/></p>
+<p><img alt="amrit-image" src="../img/img7.png"/></p>
+<h3 id="importing-db_reporting-schema">Importing db_reporting schema</h3>
+<p><img alt="amrit-image" src="../img/img8.png"/></p>
+<p><img alt="amrit-image" src="../img/img9.png"/></p>
 </article>
 </div>
 </div>
@@ -536,8 +712,8 @@ Patients, HWCs and PHCs are the key stakeholders. AMRIT can be accessible from v
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
 <script>document$.subscribe(() => {
             window.update_swagger_ui_iframe_height = function (id) {
                 var iFrameID = document.getElementById(id);
