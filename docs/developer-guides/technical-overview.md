@@ -98,7 +98,7 @@ Create database db_identity;
 Create database db_iemr;
 Create database db_reporting;  
 
-At the time of MYSQL Installation ,please notedown "root" user password for reference as it will have full privilege.  
+At the time of MYSQL Installation ,please notedown “root” user password for reference as it will have full privilege.  
 
 ### Run below commands to add users & assign permissions before importing database files
 
